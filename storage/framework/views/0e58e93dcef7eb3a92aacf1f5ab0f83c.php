@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Logistics Management System')</title>
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <title><?php echo $__env->yieldContent('title', 'Logistics Management System'); ?></title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1199,15 +1199,15 @@
         }
     </style>
     
-    @stack('styles')
+    <?php echo $__env->yieldPushContent('styles'); ?>
 </head>
 <body>
-    @auth
+    <?php if(auth()->guard()->check()): ?>
     <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg top-navbar">
         <div class="container-fluid px-0">
             <!-- Brand -->
-            <a class="navbar-brand" href="{{ route('dashboard') }}">
+            <a class="navbar-brand" href="<?php echo e(route('dashboard')); ?>">
                 <div class="logo-icon">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15" cy="15" r="12" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
@@ -1229,7 +1229,7 @@
             <!-- Main Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
             <div class="top-menu">
-                @php
+                <?php
                     $user = auth()->user();
                     $menuService = \App\Services\MenuPermissionService::class;
                     // Check dynamic permissions for main menus
@@ -1241,257 +1241,260 @@
                     $hasPayrollReports = $user->isAdmin() || $menuService::userHasPermission($user, 'reports.list-of-employees', 'view');
                     $hasSystem = $user->isAdmin() || $menuService::userHasPermission($user, 'system.change-password', 'view');
                     $hasAdmin = $user->isAdmin() || $menuService::userHasPermission($user, 'users.index', 'view') || $menuService::userHasPermission($user, 'employees.index', 'view');
-                @endphp
+                ?>
                 
                 <!-- S2E Logistics Module -->
-                @if($hasLogistics)
+                <?php if($hasLogistics): ?>
                 <div class="top-menu-item">
-                    <a href="{{ route('dashboard') }}" 
-                       class="top-menu-link {{ request()->routeIs('dashboard') || request()->routeIs('shipments.*') || request()->routeIs('customers.*') || request()->routeIs('vendors.*') || request()->routeIs('vehicles.*') || request()->routeIs('drivers.*') ? 'active' : '' }}">
+                    <a href="<?php echo e(route('dashboard')); ?>" 
+                       class="top-menu-link <?php echo e(request()->routeIs('dashboard') || request()->routeIs('shipments.*') || request()->routeIs('customers.*') || request()->routeIs('vendors.*') || request()->routeIs('vehicles.*') || request()->routeIs('drivers.*') ? 'active' : ''); ?>">
                         <span>S2E Logistics</span>
                     </a>
                 </div>
-                @endif
+                <?php endif; ?>
 
                 <!-- Logistics Reports -->
-                @if($hasLogisticsReports)
+                <?php if($hasLogisticsReports): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle {{ request()->routeIs('reports.*') ? 'active' : '' }}" 
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('reports.*') ? 'active' : ''); ?>" 
                        href="#" 
                        role="button" 
                        data-bs-toggle="dropdown">
                         <span>Logistics Reports</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('reports.cn-detail') }}">C/Ns Detail</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-invoices') }}">List of Invoices</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.cn-status') }}">C/N Status (Detail)</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.cn-status') }}">C/N Status</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.cn-profit-loss') }}">C/N Profit Loss</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.city-wise-profit-loss') }}">City-wise Profit Loss</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.shipper-wise-profit-loss') }}">Shipper-wise Profit Loss</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.delivery-cn-detail') }}">Delivery CN Detail</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.stock-in-transit') }}">Stock in Transit</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.cn-in-stock') }}">C/N In-Stock</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-detail')); ?>">C/Ns Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-invoices')); ?>">List of Invoices</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-status')); ?>">C/N Status (Detail)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-status')); ?>">C/N Status</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-profit-loss')); ?>">C/N Profit Loss</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.city-wise-profit-loss')); ?>">City-wise Profit Loss</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.shipper-wise-profit-loss')); ?>">Shipper-wise Profit Loss</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.delivery-cn-detail')); ?>">Delivery CN Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.stock-in-transit')); ?>">Stock in Transit</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-in-stock')); ?>">C/N In-Stock</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.vehicle-usage') }}">Vehicle Usage</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.driver-performance') }}">Driver Performance</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.vehicle-usage')); ?>">Vehicle Usage</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.driver-performance')); ?>">Driver Performance</a></li>
                     </ul>
                 </div>
-                @endif
+                <?php endif; ?>
 
                 <!-- Finance -->
-                @if($hasFinance)
+                <?php if($hasFinance): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle {{ request()->routeIs('invoices.*') || request()->routeIs('payments.*') || request()->routeIs('reports.list-of-*') || request()->routeIs('reports.group-party-*') ? 'active' : '' }}" 
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('invoices.*') || request()->routeIs('payments.*') || request()->routeIs('reports.list-of-*') || request()->routeIs('reports.group-party-*') ? 'active' : ''); ?>" 
                        href="#" 
                        role="button" 
                        data-bs-toggle="dropdown">
                         <span>Finance</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('invoices.index') }}">Invoices</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payments.index') }}">Payments</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('invoices.index')); ?>">Invoices</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payments.index')); ?>">Payments</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Finance Reports</h6></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-invoices') }}">List of Invoices</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-pending-invoices') }}">List of Pending Invoices</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-missing-cn-nos') }}">List of Missing C/N Nos.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.group-party-outstanding') }}">Group/Party Outstanding with S/Tax</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-invoices')); ?>">List of Invoices</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-pending-invoices')); ?>">List of Pending Invoices</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-missing-cn-nos')); ?>">List of Missing C/N Nos.</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.group-party-outstanding')); ?>">Group/Party Outstanding with S/Tax</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Master Lists</h6></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-city-codes') }}">List of City Codes</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-vehicle-types') }}">List of Vehicle Types</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-city-codes')); ?>">List of City Codes</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-vehicle-types')); ?>">List of Vehicle Types</a></li>
                     </ul>
                 </div>
-                @endif
+                <?php endif; ?>
 
                 <!-- Payroll (Merged with Payroll Reports) -->
-                @if(($user->isAdmin() || $user->isStaff()) && ($hasPayroll || $hasPayrollReports))
+                <?php if(($user->isAdmin() || $user->isStaff()) && ($hasPayroll || $hasPayrollReports)): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle {{ request()->routeIs('payroll.*') || request()->routeIs('reports.list-of-employees') || request()->routeIs('reports.list-of-monthly-deduction-allowances') || request()->routeIs('reports.employees-*') || request()->routeIs('reports.department-wise-monthly-payroll-register') || request()->routeIs('payrolls.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('payroll.*') || request()->routeIs('reports.list-of-employees') || request()->routeIs('reports.list-of-monthly-deduction-allowances') || request()->routeIs('reports.employees-*') || request()->routeIs('reports.department-wise-monthly-payroll-register') || request()->routeIs('payrolls.*') ? 'active' : ''); ?>" href="#" role="button" data-bs-toggle="dropdown">
                         <span>Payroll</span>
                     </a>
                     <ul class="dropdown-menu">
-                        @if($hasPayroll)
-                        <li><a class="dropdown-item" href="{{ route('payroll.departments') }}">Department Codes</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payroll.designations') }}">Designation Codes</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payroll.employee-master') }}">Employee Master File</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payroll.loans') }}">Loan Master File</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payroll.deductions-allowances') }}">Monthly Deduction/Allowances</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payroll.authorized-leaves') }}">Authorized Leaves</a></li>
-                        <li><a class="dropdown-item" href="{{ route('payroll.monthly-payroll-processing') }}">Monthly Payroll Processing</a></li>
+                        <?php if($hasPayroll): ?>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.departments')); ?>">Department Codes</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.designations')); ?>">Designation Codes</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.employee-master')); ?>">Employee Master File</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.loans')); ?>">Loan Master File</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.deductions-allowances')); ?>">Monthly Deduction/Allowances</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.authorized-leaves')); ?>">Authorized Leaves</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.monthly-payroll-processing')); ?>">Monthly Payroll Processing</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ route('payrolls.index') }}">Payroll Records</a></li>
-                        @endif
-                        @if($hasPayrollReports)
+                        <li><a class="dropdown-item" href="<?php echo e(route('payrolls.index')); ?>">Payroll Records</a></li>
+                        <?php endif; ?>
+                        <?php if($hasPayrollReports): ?>
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Payroll Reports</h6></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-employees') }}">List of Employees</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.list-of-monthly-deduction-allowances') }}">List of Monthly Deduction/Allowances</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.employees-authorized-leaves-detail') }}">Employee's Authorized Leaves Detail</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.employees-leaves-status') }}">Employee's Leaves Status</a></li>
-                        <li><a class="dropdown-item" href="{{ route('reports.department-wise-monthly-payroll-register') }}">Department-wise Monthly Payroll Register</a></li>
-                        @endif
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-employees')); ?>">List of Employees</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-monthly-deduction-allowances')); ?>">List of Monthly Deduction/Allowances</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.employees-authorized-leaves-detail')); ?>">Employee's Authorized Leaves Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.employees-leaves-status')); ?>">Employee's Leaves Status</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.department-wise-monthly-payroll-register')); ?>">Department-wise Monthly Payroll Register</a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
-                @endif
+                <?php endif; ?>
                 
                 <!-- Administration -->
-                @if($hasAdmin)
+                <?php if($hasAdmin): ?>
                 <div class="top-menu-item dropdown">
                     <a class="top-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                         <span>Admin</span>
                     </a>
                     <ul class="dropdown-menu">
-                        @if($user->isAdmin() || $menuService::userHasPermission($user, 'users.index', 'view'))
-                        <li><a class="dropdown-item" href="{{ route('users.index') }}">Users</a></li>
-                        @endif
-                        @if($user->isAdmin() || $menuService::userHasPermission($user, 'employees.index', 'view'))
-                        <li><a class="dropdown-item" href="{{ route('employees.index') }}">Employees</a></li>
-                        @endif
+                        <?php if($user->isAdmin() || $menuService::userHasPermission($user, 'users.index', 'view')): ?>
+                        <li><a class="dropdown-item" href="<?php echo e(route('users.index')); ?>">Users</a></li>
+                        <?php endif; ?>
+                        <?php if($user->isAdmin() || $menuService::userHasPermission($user, 'employees.index', 'view')): ?>
+                        <li><a class="dropdown-item" href="<?php echo e(route('employees.index')); ?>">Employees</a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
-                @endif
+                <?php endif; ?>
                 
                 <!-- System -->
-                @if($hasSystem)
+                <?php if($hasSystem): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle {{ request()->routeIs('system.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('system.*') ? 'active' : ''); ?>" href="#" role="button" data-bs-toggle="dropdown">
                         <span>System</span>
                     </a>
                     <ul class="dropdown-menu">
-                        @if($user->isAdmin() || $user->isStaff())
-                        <li><a class="dropdown-item {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{ route('users.index') }}">
+                        <?php if($user->isAdmin() || $user->isStaff()): ?>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('users.*') ? 'active' : ''); ?>" href="<?php echo e(route('users.index')); ?>">
                             Users
                         </a></li>
-                        @endif
-                        @if($user->isAdmin())
-                        <li><a class="dropdown-item {{ request()->routeIs('system.user-roles') ? 'active' : '' }}" href="{{ route('system.user-roles') }}">
+                        <?php endif; ?>
+                        <?php if($user->isAdmin()): ?>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.user-roles') ? 'active' : ''); ?>" href="<?php echo e(route('system.user-roles')); ?>">
                             User Roles
                         </a></li>
-                        @endif
-                        <li><a class="dropdown-item {{ request()->routeIs('system.change-password') ? 'active' : '' }}" href="{{ route('system.change-password') }}">
+                        <?php endif; ?>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.change-password') ? 'active' : ''); ?>" href="<?php echo e(route('system.change-password')); ?>">
                             Change Password
                         </a></li>
-                        @if(auth()->user()->isAdmin())
-                        <li><a class="dropdown-item {{ request()->routeIs('system.change-year') ? 'active' : '' }}" href="{{ route('system.change-year') }}">
+                        <?php if(auth()->user()->isAdmin()): ?>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.change-year') ? 'active' : ''); ?>" href="<?php echo e(route('system.change-year')); ?>">
                             Change Year
                         </a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.initialize-data') ? 'active' : '' }}" href="{{ route('system.initialize-data') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.initialize-data') ? 'active' : ''); ?>" href="<?php echo e(route('system.initialize-data')); ?>">
                             Initialize Data for re-processing
                         </a></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.data-processing') ? 'active' : '' }}" href="{{ route('system.data-processing') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.data-processing') ? 'active' : ''); ?>" href="<?php echo e(route('system.data-processing')); ?>">
                             Data Processing
                         </a></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.payroll-processing-final') ? 'active' : '' }}" href="{{ route('system.payroll-processing-final') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.payroll-processing-final') ? 'active' : ''); ?>" href="<?php echo e(route('system.payroll-processing-final')); ?>">
                             Payroll Processing - (FINAL)
                         </a></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.optimization') ? 'active' : '' }}" href="{{ route('system.optimization') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.optimization') ? 'active' : ''); ?>" href="<?php echo e(route('system.optimization')); ?>">
                             System Optimization
                         </a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.unvoid-cn') ? 'active' : '' }}" href="{{ route('system.unvoid-cn') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.unvoid-cn') ? 'active' : ''); ?>" href="<?php echo e(route('system.unvoid-cn')); ?>">
                             Un-Void C/N
                         </a></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.email-settings') ? 'active' : '' }}" href="{{ route('system.email-settings') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.email-settings') ? 'active' : ''); ?>" href="<?php echo e(route('system.email-settings')); ?>">
                             E-mail Setting
                         </a></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.inter-branches-jv') ? 'active' : '' }}" href="{{ route('system.inter-branches-jv') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.inter-branches-jv') ? 'active' : ''); ?>" href="<?php echo e(route('system.inter-branches-jv')); ?>">
                             Inter Branches J.V Code
                         </a></li>
-                        <li><a class="dropdown-item {{ request()->routeIs('system.unpost-data') ? 'active' : '' }}" href="{{ route('system.unpost-data') }}">
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.unpost-data') ? 'active' : ''); ?>" href="<?php echo e(route('system.unpost-data')); ?>">
                             Un-Post Data with Date Range
                         </a></li>
-                        @endif
+                        <?php endif; ?>
                     </ul>
                 </div>
-                @endif
+                <?php endif; ?>
             </div>
 
             <!-- User Section & City Selector (Desktop) -->
             <div class="navbar-right-section">
             <!-- City Selector -->
-            @php
+            <?php
                 $user = auth()->user();
                 $accessibleCities = $user ? $user->accessibleCities() : collect();
                 $selectedCityId = session('selected_city_id');
                 $selectedCity = $selectedCityId ? \App\Models\City::find($selectedCityId) : null;
-            @endphp
-            @if($accessibleCities->count() > 0)
+            ?>
+            <?php if($accessibleCities->count() > 0): ?>
             <div class="city-selector">
                 <label for="city-select" class="me-2">
                     City:
                 </label>
-                <form action="{{ route('cities.switch') }}" method="POST" id="city-switch-form" style="display: inline;">
-                    @csrf
+                <form action="<?php echo e(route('cities.switch')); ?>" method="POST" id="city-switch-form" style="display: inline;">
+                    <?php echo csrf_field(); ?>
                     <select name="city_id" id="city-select" class="form-select form-select-sm" onchange="this.form.submit()">
-                        @foreach($accessibleCities as $city)
-                            <option value="{{ $city->city_id }}" {{ $selectedCityId == $city->city_id ? 'selected' : '' }}>
-                                {{ $city->name }}@if($city->code) ({{ $city->code }})@endif
+                        <?php $__currentLoopData = $accessibleCities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($city->city_id); ?>" <?php echo e($selectedCityId == $city->city_id ? 'selected' : ''); ?>>
+                                <?php echo e($city->name); ?><?php if($city->code): ?> (<?php echo e($city->code); ?>)<?php endif; ?>
                             </option>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </form>
             </div>
-            @endif
+            <?php endif; ?>
 
             <div class="user-section">
                 <div class="user-info">
                     <div class="user-avatar">
-                        {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
+                        <?php echo e(strtoupper(substr(auth()->user()->name, 0, 1))); ?>
+
                     </div>
                     <div>
-                        <div class="user-name">{{ auth()->user()->name }}</div>
-                        <div class="user-role">{{ ucfirst(auth()->user()->role) }}</div>
+                        <div class="user-name"><?php echo e(auth()->user()->name); ?></div>
+                        <div class="user-role"><?php echo e(ucfirst(auth()->user()->role)); ?></div>
                     </div>
                 </div>
-                <a href="{{ route('logout') }}" 
+                <a href="<?php echo e(route('logout')); ?>" 
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                    class="btn btn-sm btn-outline-light"
                    title="Logout">
                     Logout
                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
+                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                    <?php echo csrf_field(); ?>
                 </form>
             </div>
             </div>
             </div>
         </div>
     </nav>
-    @endauth
+    <?php endif; ?>
 
     <!-- Main Content -->
     <div class="main-content">
-        @if(session('success'))
+        <?php if(session('success')): ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session('success') }}
+            <?php echo e(session('success')); ?>
+
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-        @endif
+        <?php endif; ?>
 
-        @if(session('error'))
+        <?php if(session('error')): ?>
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ session('error') }}
+            <?php echo e(session('error')); ?>
+
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-        @endif
+        <?php endif; ?>
 
-        @if($errors->any())
+        <?php if($errors->any()): ?>
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>Please fix the following errors:</strong>
             <ul class="mb-0 mt-2">
-                @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
+                <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($error); ?></li>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </ul>
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-        @endif
+        <?php endif; ?>
 
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </div>
 
     <!-- Bootstrap 5 JS -->
@@ -1528,6 +1531,7 @@
         </div>
     </footer>
 
-    @stack('scripts')
+    <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>
 </html>
+<?php /**PATH /var/www/Logistics-Management-System/resources/views/layouts/app.blade.php ENDPATH**/ ?>
