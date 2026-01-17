@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-person-workspace"></i> Driver Performance Report</h5>
+        <h5 class="mb-0"> Driver Performance Report</h5>
     </div>
     <div class="card-body">
         <div class="table-responsive">

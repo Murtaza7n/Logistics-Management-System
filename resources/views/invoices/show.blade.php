@@ -8,7 +8,7 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-receipt"></i> Invoice: {{ $invoice->invoice_number }}</h5>
+                <h5 class="mb-0"> Invoice: {{ $invoice->invoice_number }}</h5>
             </div>
             <div class="card-body">
                 <table class="table table-borderless">
@@ -34,27 +34,27 @@
                     </tr>
                     <tr>
                         <th>Subtotal:</th>
-                        <td>${{ number_format($invoice->subtotal, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->subtotal, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Tax ({{ $invoice->tax_rate }}%):</th>
-                        <td>${{ number_format($invoice->tax_amount, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->tax_amount, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Discount:</th>
-                        <td>${{ number_format($invoice->discount, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->discount, 2) }}</td>
                     </tr>
                     <tr>
                         <th><strong>Total:</strong></th>
-                        <td><strong>${{ number_format($invoice->total, 2) }}</strong></td>
+                        <td><strong>Rs.{{ number_format($invoice->total, 2) }}</strong></td>
                     </tr>
                     <tr>
                         <th>Total Paid:</th>
-                        <td>${{ number_format($invoice->total_paid, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->total_paid, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Balance:</th>
-                        <td><strong>${{ number_format($invoice->balance, 2) }}</strong></td>
+                        <td><strong>Rs.{{ number_format($invoice->balance, 2) }}</strong></td>
                     </tr>
                     <tr>
                         <th>Status:</th>
@@ -75,7 +75,7 @@
                             @foreach($invoice->shipments as $shipment)
                             <tr>
                                 <td><a href="{{ route('shipments.show', $shipment) }}">{{ $shipment->shipment_number }}</a></td>
-                                <td>${{ number_format($shipment->pivot->amount, 2) }}</td>
+                                <td>Rs.{{ number_format($shipment->pivot->amount, 2) }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -97,7 +97,7 @@
                             @foreach($invoice->payments as $payment)
                             <tr>
                                 <td>{{ $payment->payment_date->format('M d, Y') }}</td>
-                                <td>${{ number_format($payment->amount_paid, 2) }}</td>
+                                <td>Rs.{{ number_format($payment->amount_paid, 2) }}</td>
                                 <td>{{ ucfirst(str_replace('_', ' ', $payment->method)) }}</td>
                             </tr>
                             @endforeach
@@ -110,10 +110,10 @@
 
                 <div class="mt-3">
                     <a href="{{ route('payments.create', ['invoice_id' => $invoice->invoice_id]) }}" class="btn btn-success">
-                        <i class="bi bi-plus-circle"></i> Record Payment
+                         Record Payment
                     </a>
                     <a href="{{ route('invoices.index') }}" class="btn btn-secondary">
-                        <i class="bi bi-arrow-left"></i> Back
+                         Back
                     </a>
                 </div>
             </div>

@@ -17,18 +17,48 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
+        $request->validate([
+            'email' => 'required|string',
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($credentials, $request->filled('remember'))) {
+        // Try to find user by email (which can be username or email)
+        $user = User::where('email', $request->email)->first();
+
+        if ($user && Hash::check($request->password, $user->password)) {
+            Auth::login($user, $request->filled('remember'));
             $request->session()->regenerate();
+            
+            // Set default city for user
+            if ($user->isAdmin()) {
+                // Admin: Set first active city or null (can access all)
+                $defaultCity = \App\Models\City::where('is_active', true)->first();
+                if ($defaultCity) {
+                    session(['selected_city_id' => $defaultCity->city_id]);
+                }
+            } else {
+                // Non-admin: Set primary city or first accessible city
+                if ($user->primary_city_id) {
+                    session(['selected_city_id' => $user->primary_city_id]);
+                } else {
+                    $firstAccessibleCity = $user->accessibleCities()->first();
+                    if ($firstAccessibleCity) {
+                        session(['selected_city_id' => $firstAccessibleCity->city_id]);
+                    }
+                }
+            }
             
             // Log activity
             Log::info('User logged in', ['user_id' => Auth::id()]);
             
-            return redirect()->intended('/dashboard');
+            // Role-based default landing page redirection
+            if ($user->isAdmin()) {
+                // Admin: Redirect to dashboard (default behavior)
+                return redirect()->intended('/dashboard');
+            } else {
+                // Employees (staff/driver): Redirect to CN Entry page
+                return redirect()->intended('/shipments');
+            }
         }
 
         return back()->withErrors([

@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-person-workspace"></i> Create New Driver</h5>
+        <h5 class="mb-0"> Create New Driver</h5>
     </div>
     <div class="card-body">
         <form action="{{ route('drivers.store') }}" method="POST">
@@ -44,10 +44,10 @@
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Create Driver
+                     Create Driver
                 </button>
                 <a href="{{ route('drivers.index') }}" class="btn btn-secondary">
-                    <i class="bi bi-x-circle"></i> Cancel
+                     Cancel
                 </a>
             </div>
         </form>

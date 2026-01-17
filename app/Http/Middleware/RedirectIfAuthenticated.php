@@ -16,7 +16,16 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect('/dashboard');
+                $user = Auth::guard($guard)->user();
+                
+                // Role-based default landing page redirection
+                if ($user && $user->isAdmin()) {
+                    // Admin: Redirect to dashboard
+                    return redirect('/dashboard');
+                } else {
+                    // Employees (staff/driver): Redirect to CN Entry page
+                    return redirect('/shipments');
+                }
             }
         }
 

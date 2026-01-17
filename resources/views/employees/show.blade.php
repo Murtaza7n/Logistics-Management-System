@@ -8,7 +8,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-person"></i> Employee Information</h5>
+                <h5 class="mb-0"> Employee Information</h5>
             </div>
             <div class="card-body">
                 <table class="table table-borderless">
@@ -55,10 +55,10 @@
                 </table>
                 <div class="mt-3">
                     <a href="{{ route('employees.edit', $employee) }}" class="btn btn-primary">
-                        <i class="bi bi-pencil"></i> Edit
+                         Edit
                     </a>
                     <a href="{{ route('employees.index') }}" class="btn btn-secondary">
-                        <i class="bi bi-arrow-left"></i> Back
+                         Back
                     </a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-cash-stack"></i> Payroll History</h5>
+                <h5 class="mb-0"> Payroll History</h5>
             </div>
             <div class="card-body">
                 @if($employee->payrolls->count() > 0)
@@ -84,7 +84,7 @@
                             @foreach($employee->payrolls->take(10) as $payroll)
                             <tr>
                                 <td>{{ $payroll->month }}</td>
-                                <td>${{ number_format($payroll->net_salary, 2) }}</td>
+                                <td>Rs.{{ number_format($payroll->net_salary, 2) }}</td>
                                 <td><span class="badge bg-{{ $payroll->status === 'paid' ? 'success' : 'warning' }}">{{ ucfirst($payroll->status) }}</span></td>
                             </tr>
                             @endforeach

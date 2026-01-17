@@ -8,13 +8,13 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-box-seam"></i> Shipment Information</h5>
+                <h5 class="mb-0"> Shipment Information</h5>
             </div>
             <div class="card-body">
                 <table class="table table-borderless">
                     <tr>
-                        <th width="40%">Shipment Number:</th>
-                        <td>{{ $shipment->shipment_number }}</td>
+                        <th width="40%">CN Number / Consignment Note:</th>
+                        <td><strong>{{ $shipment->shipment_number }}</strong></td>
                     </tr>
                     <tr>
                         <th>Customer:</th>
@@ -62,15 +62,15 @@
                     </tr>
                     <tr>
                         <th>Total Charges:</th>
-                        <td><strong>${{ number_format($shipment->total_charges, 2) }}</strong></td>
+                        <td><strong>Rs.{{ number_format($shipment->total_charges, 2) }}</strong></td>
                     </tr>
                 </table>
                 <div class="mt-3">
                     <a href="{{ route('shipments.edit', $shipment) }}" class="btn btn-primary">
-                        <i class="bi bi-pencil"></i> Edit
+                         Edit
                     </a>
                     <a href="{{ route('shipments.index') }}" class="btn btn-secondary">
-                        <i class="bi bi-arrow-left"></i> Back
+                         Back
                     </a>
                 </div>
             </div>

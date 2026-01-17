@@ -4,99 +4,147 @@
 @section('page-title', 'Reports')
 
 @section('content')
+<!-- Page Header -->
+<div class="page-header">
+    <h1 class="page-title">
+        
+        Reports & Analytics
+    </h1>
+    <p class="page-subtitle">Generate comprehensive reports for logistics and finance operations</p>
+</div>
+
 <div class="row">
-    <div class="col-md-4">
+    <!-- Logistics Reports -->
+    <div class="col-md-6 mb-4">
         <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-box-seam"></i> Shipment Reports</h5>
+            <div class="card-header" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);">
+                <h5 class="mb-0"> Logistics Reports</h5>
             </div>
             <div class="card-body">
-                <p>Generate detailed shipment reports with filters.</p>
-                <a href="{{ route('reports.shipments') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
+                <div class="list-group list-group-flush">
+                    <a href="{{ route('reports.cn-detail') }}" class="list-group-item list-group-item-action">
+                         C/Ns Detail
+                    </a>
+                    <a href="{{ route('reports.list-of-invoices') }}" class="list-group-item list-group-item-action">
+                         List of Invoices
+                    </a>
+                    <a href="{{ route('reports.cn-status') }}" class="list-group-item list-group-item-action">
+                         C/N Status (Detail)
+                    </a>
+                    <a href="{{ route('reports.cn-status') }}" class="list-group-item list-group-item-action">
+                         C/N Status
+                    </a>
+                    <a href="{{ route('reports.cn-profit-loss') }}" class="list-group-item list-group-item-action">
+                         C/N Profit Loss
+                    </a>
+                    <a href="{{ route('reports.city-wise-profit-loss') }}" class="list-group-item list-group-item-action">
+                         City-wise Profit Loss
+                    </a>
+                    <a href="{{ route('reports.shipper-wise-profit-loss') }}" class="list-group-item list-group-item-action">
+                         Shipper-wise Profit Loss
+                    </a>
+                    <a href="{{ route('reports.delivery-cn-detail') }}" class="list-group-item list-group-item-action">
+                         Delivery CN Detail
+                    </a>
+                    <a href="{{ route('reports.stock-in-transit') }}" class="list-group-item list-group-item-action">
+                         Stock in Transit
+                    </a>
+                    <a href="{{ route('reports.cn-in-stock') }}" class="list-group-item list-group-item-action">
+                         C/N In-Stock
+                    </a>
+                    <a href="{{ route('reports.vehicle-usage') }}" class="list-group-item list-group-item-action">
+                         Vehicle Usage Report
+                    </a>
+                    <a href="{{ route('reports.driver-performance') }}" class="list-group-item list-group-item-action">
+                         Driver Performance
+                    </a>
+                    <a href="{{ route('reports.customer-wise') }}" class="list-group-item list-group-item-action">
+                         Customer-wise Reports
+                    </a>
+                    <a href="{{ route('reports.vendor-wise') }}" class="list-group-item list-group-item-action">
+                         Vendor-wise Reports
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+
+    <!-- Finance Reports -->
+    <div class="col-md-6 mb-4">
         <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-cash-stack"></i> Revenue Reports</h5>
+            <div class="card-header" style="background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%);">
+                <h5 class="mb-0"> Finance Reports</h5>
             </div>
             <div class="card-body">
-                <p>View revenue and invoice reports.</p>
-                <a href="{{ route('reports.revenue') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
+                <div class="list-group list-group-flush">
+                    <a href="{{ route('reports.revenue') }}" class="list-group-item list-group-item-action">
+                         Revenue Report
+                    </a>
+                    <a href="{{ route('reports.list-of-invoices') }}" class="list-group-item list-group-item-action">
+                         List of Invoices
+                    </a>
+                    <a href="{{ route('reports.list-of-pending-invoices') }}" class="list-group-item list-group-item-action">
+                         List of Pending Invoices
+                    </a>
+                    <a href="{{ route('reports.list-of-missing-cn-nos') }}" class="list-group-item list-group-item-action">
+                         List of Missing C/N Nos.
+                    </a>
+                    <a href="{{ route('reports.group-party-outstanding') }}" class="list-group-item list-group-item-action">
+                         Group/Party Outstanding with S/Tax
+                    </a>
+                    <a href="{{ route('reports.payroll') }}" class="list-group-item list-group-item-action">
+                         Payroll Reports
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+
+    <!-- Master Lists -->
+    <div class="col-md-6 mb-4">
         <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-person-badge"></i> Payroll Reports</h5>
+            <div class="card-header" style="background: linear-gradient(135deg, var(--info-color) 0%, #0891b2 100%);">
+                <h5 class="mb-0"> Master Lists</h5>
             </div>
             <div class="card-body">
-                <p>Generate payroll summary reports.</p>
-                <a href="{{ route('reports.payroll') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
+                <div class="list-group list-group-flush">
+                    <a href="{{ route('reports.list-of-city-codes') }}" class="list-group-item list-group-item-action">
+                         List of City Codes
+                    </a>
+                    <a href="{{ route('reports.list-of-vehicle-types') }}" class="list-group-item list-group-item-action">
+                         List of Vehicle Types
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4 mt-3">
+
+    <!-- Payroll Reports -->
+    <div class="col-md-6 mb-4">
         <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-truck"></i> Vehicle Usage</h5>
+            <div class="card-header" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);">
+                <h5 class="mb-0"> Payroll Reports</h5>
             </div>
             <div class="card-body">
-                <p>View vehicle usage statistics.</p>
-                <a href="{{ route('reports.vehicle-usage') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-3">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-person-workspace"></i> Driver Performance</h5>
-            </div>
-            <div class="card-body">
-                <p>View driver performance metrics.</p>
-                <a href="{{ route('reports.driver-performance') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-3">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-people"></i> Customer Reports</h5>
-            </div>
-            <div class="card-body">
-                <p>Customer-wise shipment and revenue reports.</p>
-                <a href="{{ route('reports.customer-wise') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-3">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-building"></i> Vendor Reports</h5>
-            </div>
-            <div class="card-body">
-                <p>Vendor-wise billing reports.</p>
-                <a href="{{ route('reports.vendor-wise') }}" class="btn btn-primary">
-                    <i class="bi bi-arrow-right"></i> View Report
-                </a>
+                <div class="list-group list-group-flush">
+                    <a href="{{ route('reports.list-of-employees') }}" class="list-group-item list-group-item-action">
+                         List of Employees
+                    </a>
+                    <a href="{{ route('reports.list-of-monthly-deduction-allowances') }}" class="list-group-item list-group-item-action">
+                         List of Monthly Deduction/Allowances
+                    </a>
+                    <a href="{{ route('reports.employees-authorized-leaves-detail') }}" class="list-group-item list-group-item-action">
+                         Employee's Authorized Leaves Detail
+                    </a>
+                    <a href="{{ route('reports.employees-leaves-status') }}" class="list-group-item list-group-item-action">
+                         Employee's Leaves Status
+                    </a>
+                    <a href="{{ route('reports.department-wise-monthly-payroll-register') }}" class="list-group-item list-group-item-action">
+                         Department-wise Monthly Payroll Register
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
-
-

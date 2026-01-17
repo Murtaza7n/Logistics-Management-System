@@ -13,6 +13,7 @@ class Vendor extends Model
     public $incrementing = true;
 
     protected $fillable = [
+        'account_code',
         'name',
         'services',
         'contact',

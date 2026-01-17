@@ -6,9 +6,9 @@
 @section('content')
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0"><i class="bi bi-receipt"></i> Invoices</h5>
+        <h5 class="mb-0"> Invoices</h5>
         <a href="{{ route('invoices.create') }}" class="btn btn-primary btn-sm">
-            <i class="bi bi-plus-circle"></i> Create Invoice
+             Create Invoice
         </a>
     </div>
     <div class="card-body">
@@ -57,13 +57,13 @@
                         <td><span class="badge bg-{{ $invoice->invoice_type === 'customer' ? 'primary' : 'info' }}">{{ ucfirst($invoice->invoice_type) }}</span></td>
                         <td>{{ $invoice->customer->name ?? $invoice->vendor->name }}</td>
                         <td>{{ $invoice->invoice_date->format('M d, Y') }}</td>
-                        <td>${{ number_format($invoice->total, 2) }}</td>
-                        <td>${{ number_format($invoice->total_paid, 2) }}</td>
-                        <td>${{ number_format($invoice->balance, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->total, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->total_paid, 2) }}</td>
+                        <td>Rs.{{ number_format($invoice->balance, 2) }}</td>
                         <td><span class="badge bg-{{ $invoice->status === 'paid' ? 'success' : ($invoice->status === 'overdue' ? 'danger' : 'warning') }}">{{ ucfirst($invoice->status) }}</span></td>
                         <td>
                             <a href="{{ route('invoices.show', $invoice) }}" class="btn btn-sm btn-outline-info">
-                                <i class="bi bi-eye"></i>
+                                
                             </a>
                         </td>
                     </tr>

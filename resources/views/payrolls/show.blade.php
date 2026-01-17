@@ -8,7 +8,7 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-cash-stack"></i> Payroll Information</h5>
+                <h5 class="mb-0"> Payroll Information</h5>
             </div>
             <div class="card-body">
                 <table class="table table-borderless">
@@ -26,19 +26,19 @@
                     </tr>
                     <tr>
                         <th>Basic Salary:</th>
-                        <td>${{ number_format($payroll->basic_salary, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->basic_salary, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Overtime:</th>
-                        <td>${{ number_format($payroll->overtime, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->overtime, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Bonus:</th>
-                        <td>${{ number_format($payroll->bonus, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->bonus, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Deductions:</th>
-                        <td>${{ number_format($payroll->deductions, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->deductions, 2) }}</td>
                     </tr>
                     <tr>
                         <th>Deduction Details:</th>
@@ -46,7 +46,7 @@
                     </tr>
                     <tr>
                         <th><strong>Net Salary:</strong></th>
-                        <td><strong>${{ number_format($payroll->net_salary, 2) }}</strong></td>
+                        <td><strong>Rs.{{ number_format($payroll->net_salary, 2) }}</strong></td>
                     </tr>
                     <tr>
                         <th>Status:</th>
@@ -63,13 +63,13 @@
                 </table>
                 <div class="mt-3">
                     <a href="{{ route('payrolls.edit', $payroll) }}" class="btn btn-primary">
-                        <i class="bi bi-pencil"></i> Edit
+                         Edit
                     </a>
                     <a href="{{ route('payrolls.payslip', $payroll) }}" class="btn btn-success" target="_blank">
-                        <i class="bi bi-printer"></i> Print Payslip
+                         Print Payslip
                     </a>
                     <a href="{{ route('payrolls.index') }}" class="btn btn-secondary">
-                        <i class="bi bi-arrow-left"></i> Back
+                         Back
                     </a>
                 </div>
             </div>

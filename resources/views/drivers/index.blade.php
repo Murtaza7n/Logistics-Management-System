@@ -6,9 +6,9 @@
 @section('content')
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0"><i class="bi bi-person-workspace"></i> Drivers</h5>
+        <h5 class="mb-0"> Drivers</h5>
         <a href="{{ route('drivers.create') }}" class="btn btn-primary btn-sm">
-            <i class="bi bi-plus-circle"></i> Add Driver
+             Add Driver
         </a>
     </div>
     <div class="card-body">
@@ -36,10 +36,10 @@
                         <td><span class="badge bg-{{ $driver->status === 'available' ? 'success' : ($driver->status === 'on-trip' ? 'warning' : 'secondary') }}">{{ ucfirst(str_replace('-', ' ', $driver->status)) }}</span></td>
                         <td>
                             <a href="{{ route('drivers.show', $driver) }}" class="btn btn-sm btn-outline-info">
-                                <i class="bi bi-eye"></i>
+                                
                             </a>
                             <a href="{{ route('drivers.edit', $driver) }}" class="btn btn-sm btn-outline-primary">
-                                <i class="bi bi-pencil"></i>
+                                
                             </a>
                         </td>
                     </tr>

@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-building"></i> Vendor-wise Report</h5>
+        <h5 class="mb-0"> Vendor-wise Report</h5>
     </div>
     <div class="card-body">
         <form method="GET" class="mb-3">
@@ -41,9 +41,9 @@
                     <tr>
                         <td>{{ $vendor->name }}</td>
                         <td>{{ $vendor->total_shipments }}</td>
-                        <td>${{ number_format($vendor->total_billing, 2) }}</td>
-                        <td>${{ number_format($vendor->total_paid, 2) }}</td>
-                        <td>${{ number_format($vendor->total_billing - $vendor->total_paid, 2) }}</td>
+                        <td>Rs.{{ number_format($vendor->total_billing, 2) }}</td>
+                        <td>Rs.{{ number_format($vendor->total_paid, 2) }}</td>
+                        <td>Rs.{{ number_format($vendor->total_billing - $vendor->total_paid, 2) }}</td>
                     </tr>
                     @empty
                     <tr>

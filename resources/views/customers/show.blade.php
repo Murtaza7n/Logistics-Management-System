@@ -8,7 +8,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-person"></i> Customer Information</h5>
+                <h5 class="mb-0"> Customer Information</h5>
             </div>
             <div class="card-body">
                 <table class="table table-borderless">
@@ -55,10 +55,10 @@
                 </table>
                 <div class="mt-3">
                     <a href="{{ route('customers.edit', $customer) }}" class="btn btn-primary">
-                        <i class="bi bi-pencil"></i> Edit
+                         Edit
                     </a>
                     <a href="{{ route('customers.index') }}" class="btn btn-secondary">
-                        <i class="bi bi-arrow-left"></i> Back
+                         Back
                     </a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-box-seam"></i> Shipments ({{ $customer->shipments->count() }})</h5>
+                <h5 class="mb-0"> Shipments ({{ $customer->shipments->count() }})</h5>
             </div>
             <div class="card-body">
                 @if($customer->shipments->count() > 0)
@@ -85,7 +85,7 @@
                             <tr>
                                 <td><a href="{{ route('shipments.show', $shipment) }}">{{ $shipment->shipment_number }}</a></td>
                                 <td><span class="badge bg-{{ $shipment->status === 'delivered' ? 'success' : 'warning' }}">{{ ucfirst(str_replace('-', ' ', $shipment->status)) }}</span></td>
-                                <td>${{ number_format($shipment->total_charges, 2) }}</td>
+                                <td>Rs.{{ number_format($shipment->total_charges, 2) }}</td>
                             </tr>
                             @endforeach
                         </tbody>

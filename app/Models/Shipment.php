@@ -14,8 +14,23 @@ class Shipment extends Model
 
     protected $fillable = [
         'shipment_number',
+        'system_year',
+        'cn_book_id',
         'customer_id',
         'vendor_id',
+        'entry_city',
+        'shipper_code',
+        'shipper_name',
+        'shipper_address_line1',
+        'shipper_address_line2',
+        'shipper_address_line3',
+        'shipper_contact',
+        'consignee_code',
+        'consignee_name',
+        'consignee_address_line1',
+        'consignee_address_line2',
+        'consignee_address_line3',
+        'consignee_contact',
         'sender',
         'receiver',
         'sender_contact',
@@ -25,12 +40,18 @@ class Shipment extends Model
         'pickup_address',
         'delivery_address',
         'cargo_type',
+        'cn_type',
         'weight',
         'dimension',
         'quantity',
+        'packages',
+        'packaging_type',
         'freight_charges',
         'labor_charges',
         'other_charges',
+        'declared_value',
+        'payment_mode',
+        'delivery_type',
         'status',
         'vehicle_id',
         'driver_id',
@@ -38,13 +59,16 @@ class Shipment extends Model
         'delivery_date',
         'actual_delivery_date',
         'notes',
+        'special_instructions',
     ];
 
     protected $casts = [
         'weight' => 'decimal:2',
+        'packages' => 'decimal:2',
         'freight_charges' => 'decimal:2',
         'labor_charges' => 'decimal:2',
         'other_charges' => 'decimal:2',
+        'declared_value' => 'decimal:2',
         'pickup_date' => 'date',
         'delivery_date' => 'date',
         'actual_delivery_date' => 'date',
@@ -68,6 +92,19 @@ class Shipment extends Model
     public function driver()
     {
         return $this->belongsTo(Driver::class, 'driver_id');
+    }
+
+    public function entryCity()
+    {
+        return $this->belongsTo(City::class, 'entry_city', 'city_id');
+    }
+
+    /**
+     * Get the CN number usage record for this shipment
+     */
+    public function cnNumberUsage()
+    {
+        return $this->hasOne(CNNumberUsage::class, 'shipment_id', 'shipment_id');
     }
 
     public function invoices()

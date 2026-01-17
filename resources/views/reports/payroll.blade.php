@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-person-badge"></i> Payroll Reports</h5>
+        <h5 class="mb-0"> Payroll Reports</h5>
     </div>
     <div class="card-body">
         <form method="GET" class="mb-3">
@@ -42,7 +42,7 @@
                 <div class="card bg-success text-white">
                     <div class="card-body">
                         <h6>Total Basic Salary</h6>
-                        <h3>${{ number_format($summary['total_basic_salary'], 2) }}</h3>
+                        <h3>Rs.{{ number_format($summary['total_basic_salary'], 2) }}</h3>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <div class="card bg-info text-white">
                     <div class="card-body">
                         <h6>Total Overtime</h6>
-                        <h3>${{ number_format($summary['total_overtime'], 2) }}</h3>
+                        <h3>Rs.{{ number_format($summary['total_overtime'], 2) }}</h3>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <div class="card bg-warning text-white">
                     <div class="card-body">
                         <h6>Net Salary</h6>
-                        <h3>${{ number_format($summary['total_net_salary'], 2) }}</h3>
+                        <h3>Rs.{{ number_format($summary['total_net_salary'], 2) }}</h3>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
 
         <div class="d-flex justify-content-end mb-3">
             <a href="{{ route('reports.payroll', array_merge(request()->all(), ['export' => 'pdf'])) }}" class="btn btn-danger">
-                <i class="bi bi-file-pdf"></i> Export PDF
+                 Export PDF
             </a>
         </div>
 
@@ -91,11 +91,11 @@
                         <td>{{ $payroll->payroll_id }}</td>
                         <td>{{ $payroll->employee->name }}</td>
                         <td>{{ $payroll->month }}</td>
-                        <td>${{ number_format($payroll->basic_salary, 2) }}</td>
-                        <td>${{ number_format($payroll->overtime, 2) }}</td>
-                        <td>${{ number_format($payroll->bonus, 2) }}</td>
-                        <td>${{ number_format($payroll->deductions, 2) }}</td>
-                        <td><strong>${{ number_format($payroll->net_salary, 2) }}</strong></td>
+                        <td>Rs.{{ number_format($payroll->basic_salary, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->overtime, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->bonus, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->deductions, 2) }}</td>
+                        <td><strong>Rs.{{ number_format($payroll->net_salary, 2) }}</strong></td>
                         <td><span class="badge bg-{{ $payroll->status === 'paid' ? 'success' : 'warning' }}">{{ ucfirst($payroll->status) }}</span></td>
                     </tr>
                     @empty

@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-pencil"></i> Edit Customer</h5>
+        <h5 class="mb-0"> Edit Customer</h5>
     </div>
     <div class="card-body">
         <form action="{{ route('customers.update', $customer) }}" method="POST">
@@ -55,10 +55,10 @@
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Update Customer
+                     Update Customer
                 </button>
                 <a href="{{ route('customers.index') }}" class="btn btn-secondary">
-                    <i class="bi bi-x-circle"></i> Cancel
+                     Cancel
                 </a>
             </div>
         </form>

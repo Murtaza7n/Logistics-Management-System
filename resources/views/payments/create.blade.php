@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-credit-card"></i> Record Payment</h5>
+        <h5 class="mb-0"> Record Payment</h5>
     </div>
     <div class="card-body">
         <form action="{{ route('payments.store') }}" method="POST">
@@ -18,7 +18,7 @@
                         <option value="">Select Invoice</option>
                         @foreach($invoices as $inv)
                         <option value="{{ $inv->invoice_id }}" {{ old('invoice_id', request('invoice_id')) == $inv->invoice_id ? 'selected' : '' }}>
-                            {{ $inv->invoice_number }} - Balance: ${{ number_format($inv->balance, 2) }}
+                            {{ $inv->invoice_number }} - Balance: Rs.{{ number_format($inv->balance, 2) }}
                         </option>
                         @endforeach
                     </select>
@@ -52,10 +52,10 @@
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Record Payment
+                     Record Payment
                 </button>
                 <a href="{{ route('payments.index') }}" class="btn btn-secondary">
-                    <i class="bi bi-x-circle"></i> Cancel
+                     Cancel
                 </a>
             </div>
         </form>

@@ -6,9 +6,9 @@
 @section('content')
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0"><i class="bi bi-building"></i> Vendors</h5>
+        <h5 class="mb-0"> Vendors</h5>
         <a href="{{ route('vendors.create') }}" class="btn btn-primary btn-sm">
-            <i class="bi bi-plus-circle"></i> Add Vendor
+             Add Vendor
         </a>
     </div>
     <div class="card-body">
@@ -36,16 +36,16 @@
                         <td><span class="badge bg-{{ $vendor->status === 'active' ? 'success' : 'secondary' }}">{{ ucfirst($vendor->status) }}</span></td>
                         <td>
                             <a href="{{ route('vendors.show', $vendor) }}" class="btn btn-sm btn-outline-info">
-                                <i class="bi bi-eye"></i>
+                                
                             </a>
                             <a href="{{ route('vendors.edit', $vendor) }}" class="btn btn-sm btn-outline-primary">
-                                <i class="bi bi-pencil"></i>
+                                
                             </a>
                             <form action="{{ route('vendors.destroy', $vendor) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure?')">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-outline-danger">
-                                    <i class="bi bi-trash"></i>
+                                    
                                 </button>
                             </form>
                         </td>

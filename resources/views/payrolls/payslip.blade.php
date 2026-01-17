@@ -42,29 +42,29 @@
                     <tbody>
                         <tr>
                             <td>Basic Salary</td>
-                            <td class="text-end">${{ number_format($payroll->basic_salary, 2) }}</td>
+                            <td class="text-end">Rs.{{ number_format($payroll->basic_salary, 2) }}</td>
                         </tr>
                         @if($payroll->overtime > 0)
                         <tr>
                             <td>Overtime</td>
-                            <td class="text-end">${{ number_format($payroll->overtime, 2) }}</td>
+                            <td class="text-end">Rs.{{ number_format($payroll->overtime, 2) }}</td>
                         </tr>
                         @endif
                         @if($payroll->bonus > 0)
                         <tr>
                             <td>Bonus</td>
-                            <td class="text-end">${{ number_format($payroll->bonus, 2) }}</td>
+                            <td class="text-end">Rs.{{ number_format($payroll->bonus, 2) }}</td>
                         </tr>
                         @endif
                         @if($payroll->deductions > 0)
                         <tr>
                             <td>Deductions</td>
-                            <td class="text-end">-${{ number_format($payroll->deductions, 2) }}</td>
+                            <td class="text-end">-Rs.{{ number_format($payroll->deductions, 2) }}</td>
                         </tr>
                         @endif
                         <tr class="table-primary">
                             <td><strong>Net Salary</strong></td>
-                            <td class="text-end"><strong>${{ number_format($payroll->net_salary, 2) }}</strong></td>
+                            <td class="text-end"><strong>Rs.{{ number_format($payroll->net_salary, 2) }}</strong></td>
                         </tr>
                     </tbody>
                 </table>

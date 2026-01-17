@@ -8,7 +8,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-building"></i> Vendor Information</h5>
+                <h5 class="mb-0"> Vendor Information</h5>
             </div>
             <div class="card-body">
                 <table class="table table-borderless">
@@ -51,10 +51,10 @@
                 </table>
                 <div class="mt-3">
                     <a href="{{ route('vendors.edit', $vendor) }}" class="btn btn-primary">
-                        <i class="bi bi-pencil"></i> Edit
+                         Edit
                     </a>
                     <a href="{{ route('vendors.index') }}" class="btn btn-secondary">
-                        <i class="bi bi-arrow-left"></i> Back
+                         Back
                     </a>
                 </div>
             </div>
@@ -63,7 +63,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-box-seam"></i> Shipments ({{ $vendor->shipments->count() }})</h5>
+                <h5 class="mb-0"> Shipments ({{ $vendor->shipments->count() }})</h5>
             </div>
             <div class="card-body">
                 @if($vendor->shipments->count() > 0)

@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-truck"></i> Vehicle Usage Report</h5>
+        <h5 class="mb-0"> Vehicle Usage Report</h5>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -28,7 +28,7 @@
                         <td>{{ $vehicle->type }}</td>
                         <td><span class="badge bg-{{ $vehicle->status === 'available' ? 'success' : 'warning' }}">{{ ucfirst(str_replace('-', ' ', $vehicle->status)) }}</span></td>
                         <td>{{ $vehicle->total_shipments }}</td>
-                        <td>${{ number_format($vehicle->total_revenue, 2) }}</td>
+                        <td>Rs.{{ number_format($vehicle->total_revenue, 2) }}</td>
                         <td>{{ $vehicle->driver->name ?? 'N/A' }}</td>
                     </tr>
                     @empty

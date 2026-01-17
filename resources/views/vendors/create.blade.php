@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-building"></i> Create New Vendor</h5>
+        <h5 class="mb-0"> Create New Vendor</h5>
     </div>
     <div class="card-body">
         <form action="{{ route('vendors.store') }}" method="POST">
@@ -50,10 +50,10 @@
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Create Vendor
+                     Create Vendor
                 </button>
                 <a href="{{ route('vendors.index') }}" class="btn btn-secondary">
-                    <i class="bi bi-x-circle"></i> Cancel
+                     Cancel
                 </a>
             </div>
         </form>

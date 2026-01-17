@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-pencil"></i> Edit Shipment</h5>
+        <h5 class="mb-0"> Edit Shipment</h5>
     </div>
     <div class="card-body">
         <form action="{{ route('shipments.update', $shipment) }}" method="POST">
@@ -14,8 +14,21 @@
             @method('PUT')
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="shipment_number" class="form-label">Shipment Number <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="shipment_number" name="shipment_number" value="{{ old('shipment_number', $shipment->shipment_number) }}" required>
+                    <label for="shipment_number" class="form-label">
+                        CN Number / Consignment Note <span class="text-danger">*</span>
+                        <small class="text-muted d-block">(Shipment Number)</small>
+                    </label>
+                    <input type="text" 
+                           class="form-control @error('shipment_number') is-invalid @enderror" 
+                           id="shipment_number" 
+                           name="shipment_number" 
+                           value="{{ old('shipment_number', $shipment->shipment_number) }}" 
+                           placeholder="Enter CN/Consignment Note Number"
+                           required>
+                    @error('shipment_number')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                    <small class="form-text text-muted">Enter the unique Consignment Note (CN) number for this shipment</small>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="customer_id" class="form-label">Customer <span class="text-danger">*</span></label>
@@ -49,10 +62,10 @@
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Update Shipment
+                     Update Shipment
                 </button>
                 <a href="{{ route('shipments.index') }}" class="btn btn-secondary">
-                    <i class="bi bi-x-circle"></i> Cancel
+                     Cancel
                 </a>
             </div>
         </form>

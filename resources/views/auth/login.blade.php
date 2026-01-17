@@ -45,8 +45,8 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required autofocus>
+                <label for="email" class="form-label">Username / Email</label>
+                <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}" required autofocus>
             </div>
 
             <div class="mb-3">
@@ -60,7 +60,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary w-100" style="background-color: #4B5563; border-color: #4B5563;">
-                <i class="bi bi-box-arrow-in-right"></i> Sign In
+                 Sign In
             </button>
         </form>
     </div>

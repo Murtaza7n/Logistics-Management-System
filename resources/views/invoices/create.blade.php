@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-receipt"></i> Create New Invoice</h5>
+        <h5 class="mb-0"> Create New Invoice</h5>
     </div>
     <div class="card-body">
         <form action="{{ route('invoices.store') }}" method="POST">
@@ -49,7 +49,7 @@
                     <label for="shipment_ids" class="form-label">Shipments <span class="text-danger">*</span></label>
                     <select class="form-select" id="shipment_ids" name="shipment_ids[]" multiple required size="5">
                         @foreach($shipments as $shipment)
-                        <option value="{{ $shipment->shipment_id }}">{{ $shipment->shipment_number }} - ${{ number_format($shipment->total_charges, 2) }}</option>
+                        <option value="{{ $shipment->shipment_id }}">{{ $shipment->shipment_number }} - Rs.{{ number_format($shipment->total_charges, 2) }}</option>
                         @endforeach
                     </select>
                     <small class="form-text text-muted">Hold Ctrl/Cmd to select multiple shipments</small>
@@ -69,10 +69,10 @@
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Create Invoice
+                     Create Invoice
                 </button>
                 <a href="{{ route('invoices.index') }}" class="btn btn-secondary">
-                    <i class="bi bi-x-circle"></i> Cancel
+                     Cancel
                 </a>
             </div>
         </form>

@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-box-seam"></i> Shipment Reports</h5>
+        <h5 class="mb-0"> Shipment Reports</h5>
     </div>
     <div class="card-body">
         <form method="GET" class="mb-3">
@@ -44,7 +44,7 @@
                 <div class="card bg-success text-white">
                     <div class="card-body">
                         <h6>Total Freight</h6>
-                        <h3>${{ number_format($summary['total_freight'], 2) }}</h3>
+                        <h3>Rs.{{ number_format($summary['total_freight'], 2) }}</h3>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="card bg-info text-white">
                     <div class="card-body">
                         <h6>Total Labor</h6>
-                        <h3>${{ number_format($summary['total_labor'], 2) }}</h3>
+                        <h3>Rs.{{ number_format($summary['total_labor'], 2) }}</h3>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 <div class="card bg-warning text-white">
                     <div class="card-body">
                         <h6>Grand Total</h6>
-                        <h3>${{ number_format($summary['grand_total'], 2) }}</h3>
+                        <h3>Rs.{{ number_format($summary['grand_total'], 2) }}</h3>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
 
         <div class="d-flex justify-content-end mb-3">
             <a href="{{ route('reports.shipments', array_merge(request()->all(), ['export' => 'pdf'])) }}" class="btn btn-danger">
-                <i class="bi bi-file-pdf"></i> Export PDF
+                 Export PDF
             </a>
         </div>
 
@@ -93,10 +93,10 @@
                         <td>{{ $shipment->customer->name }}</td>
                         <td>{{ $shipment->pickup_city }} → {{ $shipment->delivery_city }}</td>
                         <td><span class="badge bg-{{ $shipment->status === 'delivered' ? 'success' : 'warning' }}">{{ ucfirst(str_replace('-', ' ', $shipment->status)) }}</span></td>
-                        <td>${{ number_format($shipment->freight_charges, 2) }}</td>
-                        <td>${{ number_format($shipment->labor_charges, 2) }}</td>
-                        <td>${{ number_format($shipment->other_charges, 2) }}</td>
-                        <td><strong>${{ number_format($shipment->total_charges, 2) }}</strong></td>
+                        <td>Rs.{{ number_format($shipment->freight_charges, 2) }}</td>
+                        <td>Rs.{{ number_format($shipment->labor_charges, 2) }}</td>
+                        <td>Rs.{{ number_format($shipment->other_charges, 2) }}</td>
+                        <td><strong>Rs.{{ number_format($shipment->total_charges, 2) }}</strong></td>
                     </tr>
                     @empty
                     <tr>

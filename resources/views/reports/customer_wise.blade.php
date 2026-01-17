@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0"><i class="bi bi-people"></i> Customer-wise Report</h5>
+        <h5 class="mb-0"> Customer-wise Report</h5>
     </div>
     <div class="card-body">
         <form method="GET" class="mb-3">
@@ -40,8 +40,8 @@
                     <tr>
                         <td>{{ $customer->name }}</td>
                         <td>{{ $customer->total_shipments }}</td>
-                        <td>${{ number_format($customer->total_revenue, 2) }}</td>
-                        <td>${{ number_format($customer->pending_amount, 2) }}</td>
+                        <td>Rs.{{ number_format($customer->total_revenue, 2) }}</td>
+                        <td>Rs.{{ number_format($customer->pending_amount, 2) }}</td>
                     </tr>
                     @empty
                     <tr>

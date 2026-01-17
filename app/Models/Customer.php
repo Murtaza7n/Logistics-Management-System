@@ -13,6 +13,7 @@ class Customer extends Model
     public $incrementing = true;
 
     protected $fillable = [
+        'account_code',
         'name',
         'contact',
         'email',

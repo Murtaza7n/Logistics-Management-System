@@ -6,9 +6,9 @@
 @section('content')
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0"><i class="bi bi-cash-stack"></i> Payroll</h5>
+        <h5 class="mb-0"> Payroll</h5>
         <a href="{{ route('payrolls.create') }}" class="btn btn-primary btn-sm">
-            <i class="bi bi-plus-circle"></i> Add Payroll
+             Add Payroll
         </a>
     </div>
     <div class="card-body">
@@ -52,20 +52,20 @@
                         <td>{{ $payroll->payroll_id }}</td>
                         <td>{{ $payroll->employee->name }}</td>
                         <td>{{ $payroll->month }}</td>
-                        <td>${{ number_format($payroll->basic_salary, 2) }}</td>
-                        <td>${{ number_format($payroll->overtime, 2) }}</td>
-                        <td>${{ number_format($payroll->deductions, 2) }}</td>
-                        <td><strong>${{ number_format($payroll->net_salary, 2) }}</strong></td>
+                        <td>Rs.{{ number_format($payroll->basic_salary, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->overtime, 2) }}</td>
+                        <td>Rs.{{ number_format($payroll->deductions, 2) }}</td>
+                        <td><strong>Rs.{{ number_format($payroll->net_salary, 2) }}</strong></td>
                         <td><span class="badge bg-{{ $payroll->status === 'paid' ? 'success' : ($payroll->status === 'pending' ? 'warning' : 'danger') }}">{{ ucfirst($payroll->status) }}</span></td>
                         <td>
                             <a href="{{ route('payrolls.show', $payroll) }}" class="btn btn-sm btn-outline-info">
-                                <i class="bi bi-eye"></i>
+                                
                             </a>
                             <a href="{{ route('payrolls.edit', $payroll) }}" class="btn btn-sm btn-outline-primary">
-                                <i class="bi bi-pencil"></i>
+                                
                             </a>
                             <a href="{{ route('payrolls.payslip', $payroll) }}" class="btn btn-sm btn-outline-success" target="_blank">
-                                <i class="bi bi-printer"></i>
+                                
                             </a>
                         </td>
                     </tr>
