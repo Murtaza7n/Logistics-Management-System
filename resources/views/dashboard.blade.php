@@ -23,7 +23,7 @@
         box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         height: 100%;
-        border-left: 4px solid var(--orange-primary);
+        border-left: 4px solid var(--metallic-silver);
     }
     
     .summary-card:hover {
@@ -32,33 +32,33 @@
     }
     
     .summary-card.primary {
-        background: linear-gradient(135deg, var(--orange-primary) 0%, #ff8c5a 100%);
-        color: white;
-        border-left-color: #ff8c5a;
+        background: linear-gradient(135deg, var(--metallic-silver) 0%, #8a8d90 100%);
+        color: var(--black);
+        border-left-color: var(--metallic-silver);
     }
     
     .summary-card.success {
-        background: linear-gradient(135deg, #28a745 0%, #5cb85c 100%);
-        color: white;
-        border-left-color: #5cb85c;
+        background: linear-gradient(135deg, var(--metallic-silver) 0%, #8a8d90 100%);
+        color: var(--black);
+        border-left-color: var(--metallic-silver);
     }
     
     .summary-card.warning {
-        background: linear-gradient(135deg, #ffc107 0%, #ffd54f 100%);
+        background: linear-gradient(135deg, var(--metallic-silver) 0%, #8a8d90 100%);
         color: var(--black);
-        border-left-color: #ffd54f;
+        border-left-color: var(--metallic-silver);
     }
     
     .summary-card.danger {
-        background: linear-gradient(135deg, #dc3545 0%, #e57373 100%);
-        color: white;
-        border-left-color: #e57373;
+        background: linear-gradient(135deg, var(--metallic-silver) 0%, #8a8d90 100%);
+        color: var(--black);
+        border-left-color: var(--metallic-silver);
     }
     
     .summary-card.info {
-        background: linear-gradient(135deg, #17a2b8 0%, #4dd0e1 100%);
-        color: white;
-        border-left-color: #4dd0e1;
+        background: linear-gradient(135deg, var(--metallic-silver) 0%, #8a8d90 100%);
+        color: var(--black);
+        border-left-color: var(--metallic-silver);
     }
     
     .summary-card h3 {

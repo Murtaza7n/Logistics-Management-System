@@ -154,7 +154,7 @@
 
         .navbar-brand .logo-text .tagline {
             font-size: 0.7rem;
-            color: var(--secondary-color);
+            color: var(--clean-white);
             font-weight: 400;
             margin-top: 2px;
             letter-spacing: 0.3px;
@@ -217,6 +217,28 @@
             border-radius: 8px;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        /* Custom scrollbar for dropdown menus */
+        .dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .dropdown-menu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .dropdown-menu::-webkit-scrollbar-thumb {
+            background: var(--metallic-silver);
+            border-radius: 4px;
+        }
+        
+        .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background: #8a8d90;
         }
 
         .dropdown-item {
