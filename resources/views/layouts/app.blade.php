@@ -175,6 +175,9 @@
             align-items: center;
             flex: 1;
             padding: 0 1rem;
+            flex-wrap: wrap;
+            gap: 0;
+            min-width: 0;
         }
 
         .top-menu-item {
@@ -304,6 +307,14 @@
             gap: 1rem;
             padding: 0 1.5rem;
             border-left: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 1;
+            min-width: fit-content;
+        }
+        
+        .user-section > div {
+            display: flex;
+            align-items: center;
         }
 
         .user-info {
@@ -311,6 +322,7 @@
             align-items: center;
             gap: 0.75rem;
             color: var(--clean-white);
+            white-space: nowrap;
         }
 
         .user-avatar {
@@ -322,16 +334,23 @@
             align-items: center;
             justify-content: center;
             font-weight: 600;
+            color: var(--clean-white);
+            font-size: 0.9rem;
+            flex-shrink: 0;
         }
 
         .user-name {
             font-weight: 500;
             font-size: 0.9rem;
+            color: var(--clean-white);
+            line-height: 1.2;
         }
 
         .user-role {
             font-size: 0.75rem;
-            opacity: 0.8;
+            opacity: 0.9;
+            color: var(--clean-white);
+            line-height: 1.2;
         }
 
         /* Main Content Area */
@@ -727,6 +746,10 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+            margin-left: auto;
         }
 
         /* Responsive Tables */
@@ -810,6 +833,9 @@
                 background: rgba(0, 0, 0, 0.2);
                 margin: 0;
                 border-radius: 0;
+                max-height: 400px;
+                overflow-y: auto;
+                overflow-x: hidden;
             }
 
             .navbar-right-section {
