@@ -100,13 +100,13 @@
     <div class="d-flex align-items-center gap-2">
         <label for="per_page" class="mb-0" style="white-space: nowrap;">Show:</label>
         <select class="form-select form-select-sm" id="per_page" name="per_page" style="width: auto;" onchange="updatePerPage(this.value)">
-            <option value="15" {{ request('per_page', 15) == 15 ? 'selected' : '' }}>15</option>
-            <option value="25" {{ request('per_page') == 25 ? 'selected' : '' }}>25</option>
-            <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
-            <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100</option>
-            <option value="all" {{ request('per_page') == 'all' ? 'selected' : '' }}>All</option>
-        </select>
-    </div>
+                <option value="15" {{ request('per_page', 15) == 15 ? 'selected' : '' }}>15</option>
+                <option value="25" {{ request('per_page') == 25 ? 'selected' : '' }}>25</option>
+                <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
+                <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100</option>
+                <option value="all" {{ request('per_page') == 'all' ? 'selected' : '' }}>All</option>
+            </select>
+        </div>
     <div class="d-flex align-items-center gap-2 flex-grow-1">
         <label for="search" class="mb-0" style="white-space: nowrap;">Search:</label>
         <form method="GET" action="{{ route('users.index') }}" class="d-flex gap-2 flex-grow-1">
@@ -131,12 +131,12 @@
             </a>
             @endif
         </form>
-    </div>
+        </div>
     <div>
         <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary">
-            <i class="bi bi-plus-circle"></i> New User
-        </a>
-    </div>
+                <i class="bi bi-plus-circle"></i> New User
+            </a>
+        </div>
 </div>
 
 <!-- Users Table -->

@@ -123,8 +123,8 @@
             <!-- Users & Menu Rights Tab -->
             <div class="tab-pane fade show active" id="menu-rights" role="tabpanel">
                 <form id="userForm" action="{{ route('users.update', $user) }}" method="POST">
-                    @csrf
-                    @method('PUT')
+            @csrf
+            @method('PUT')
                     <div class="user-form-container">
                         <!-- Left: User Details -->
                         <div class="user-details-section">
@@ -147,30 +147,30 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                    <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $user->name) }}" required>
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                            </div>
+                </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">User Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email', $user->email) }}" required>
                                 @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                            </div>
+                </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Password (leave blank to keep current)</label>
+                    <label for="password" class="form-label">Password (leave blank to keep current)</label>
                                 <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
                                 @error('password')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                            </div>
+                </div>
                             <div class="mb-3">
-                                <label for="password_confirmation" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
-                            </div>
+                    <label for="password_confirmation" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                </div>
                             <div class="mb-3">
                                 <label for="contact" class="form-label">Contact</label>
                                 <input type="text" class="form-control @error('contact') is-invalid @enderror" id="contact" name="contact" value="{{ old('contact', $user->contact ?? '') }}">
@@ -197,7 +197,7 @@
                 <div class="user-cities-section">
                     <h6 class="mb-3">Assign Cities to User</h6>
                     <div class="row">
-                        <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3">
                             <label for="primary_city_id" class="form-label">Primary City</label>
                             <select class="form-select" id="primary_city_id" name="primary_city_id" form="userForm">
                                 <option value="">Select Primary City</option>
@@ -206,7 +206,7 @@
                                     {{ $city->name }} @if($city->code)({{ $city->code }})@endif
                                 </option>
                                 @endforeach
-                            </select>
+                    </select>
                         </div>
                     </div>
                     <div class="card">
@@ -273,7 +273,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     </div>
 </div>
 

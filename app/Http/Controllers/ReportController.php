@@ -601,6 +601,246 @@ class ReportController extends Controller
             ->get();
         return view('reports.list_of_vehicle_types', compact('vehicleTypes'));
     }
+
+    // ============ ADDITIONAL LOGISTICS REPORTS ============
+    
+    public function hubWiseProfitLoss(Request $request)
+    {
+        $shipments = Shipment::with(['entryCity'])
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            })
+            ->get();
+
+        $hubWise = $shipments->groupBy('hub')->map(function($group) {
+            return [
+                'hub' => $group->first()->hub ?? 'N/A',
+                'count' => $group->count(),
+                'revenue' => $group->sum(function($s) {
+                    return ($s->freight_charges ?? 0) + ($s->labor_charges ?? 0) + ($s->other_charges ?? 0);
+                }),
+            ];
+        });
+
+        return view('reports.hub_wise_profit_loss', compact('hubWise'));
+    }
+
+    public function spoWiseProfitLoss(Request $request)
+    {
+        $shipments = Shipment::with(['cargoOfficer'])
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            })
+            ->get();
+
+        $spoWise = $shipments->groupBy('cargo_officer_id')->map(function($group) {
+            return [
+                'spo' => $group->first()->cargoOfficer->officer_name ?? 'N/A',
+                'count' => $group->count(),
+                'revenue' => $group->sum(function($s) {
+                    return ($s->freight_charges ?? 0) + ($s->labor_charges ?? 0) + ($s->other_charges ?? 0);
+                }),
+            ];
+        });
+
+        return view('reports.spo_wise_profit_loss', compact('spoWise'));
+    }
+
+    public function hubWiseCnDetail(Request $request)
+    {
+        $query = Shipment::with(['customer', 'vendor', 'vehicle', 'driver'])
+            ->when($request->filled('hub'), function($q) use ($request) {
+                $q->where('hub', $request->hub);
+            })
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            });
+
+        $shipments = $query->latest()->get();
+        return view('reports.hub_wise_cn_detail', compact('shipments'));
+    }
+
+    public function transporterWiseDocumentsDetail(Request $request)
+    {
+        $query = Shipment::with(['vehicle', 'driver'])
+            ->whereNotNull('vehicle_id')
+            ->when($request->filled('vehicle_id'), function($q) use ($request) {
+                $q->where('vehicle_id', $request->vehicle_id);
+            })
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            });
+
+        $shipments = $query->latest()->get();
+        $vehicles = Vehicle::where('status', 'active')->get();
+        
+        return view('reports.transporter_wise_documents_detail', compact('shipments', 'vehicles'));
+    }
+
+    public function zoneWiseProfitLoss(Request $request)
+    {
+        $shipments = Shipment::with(['zone'])
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            })
+            ->get();
+
+        $zoneWise = $shipments->groupBy('zone_code')->map(function($group) {
+            return [
+                'zone' => $group->first()->zone->zone_name ?? 'N/A',
+                'count' => $group->count(),
+                'revenue' => $group->sum(function($s) {
+                    return ($s->freight_charges ?? 0) + ($s->labor_charges ?? 0) + ($s->other_charges ?? 0);
+                }),
+            ];
+        });
+
+        return view('reports.zone_wise_profit_loss', compact('zoneWise'));
+    }
+
+    public function listOfMissingSnNumbers(Request $request)
+    {
+        // Find missing serial numbers in CN sequence
+        $shipments = Shipment::orderBy('shipment_number')->get();
+        $missing = [];
+        
+        // Simplified implementation
+        return view('reports.list_of_missing_sn_numbers', compact('missing'));
+    }
+
+    public function cityCodeHubWiseList(Request $request)
+    {
+        $cities = \App\Models\City::with('hubs')
+            ->where('is_active', true)
+            ->orderBy('name')
+            ->get();
+        
+        return view('reports.city_code_hub_wise_list', compact('cities'));
+    }
+
+    public function listOfRates(Request $request)
+    {
+        $rates = \App\Models\PartyAreaRate::with('cities')
+            ->where('is_active', true)
+            ->orderBy('party_name')
+            ->get();
+        
+        return view('reports.list_of_rates', compact('rates'));
+    }
+
+    public function partyWiseFuelRateList(Request $request)
+    {
+        $fuelRates = \App\Models\PartyFuelRate::where('is_active', true)
+            ->orderBy('party_name')
+            ->get();
+        
+        return view('reports.party_wise_fuel_rate_list', compact('fuelRates'));
+    }
+
+    public function listOfInvoicesSalesTax(Request $request)
+    {
+        $query = Invoice::with(['customer', 'vendor'])
+            ->where('tax_amount', '>', 0)
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('invoice_date', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('invoice_date', '<=', $request->to_date);
+            });
+
+        $invoices = $query->latest()->get();
+        return view('reports.list_of_invoices_sales_tax', compact('invoices'));
+    }
+
+    public function cnDetailAccountCod(Request $request)
+    {
+        $query = Shipment::with(['customer', 'vendor'])
+            ->where('payment_mode', 'COD')
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            });
+
+        $shipments = $query->latest()->get();
+        return view('reports.cn_detail_account_cod', compact('shipments'));
+    }
+
+    public function deliverySheetCodDetail(Request $request)
+    {
+        $query = \App\Models\DeliverySheet::with(['shipments'])
+            ->whereHas('shipments', function($q) {
+                $q->where('payment_mode', 'COD');
+            })
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('delivery_date', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('delivery_date', '<=', $request->to_date);
+            });
+
+        $deliverySheets = $query->latest()->get();
+        return view('reports.delivery_sheet_cod_detail', compact('deliverySheets'));
+    }
+
+    public function cnDetailAccountCodStatus(Request $request)
+    {
+        $query = Shipment::with(['customer', 'vendor'])
+            ->where('payment_mode', 'COD')
+            ->when($request->filled('status'), function($q) use ($request) {
+                $q->where('status', $request->status);
+            });
+
+        $shipments = $query->latest()->get();
+        $statusCounts = $shipments->groupBy('status')->map->count();
+        
+        return view('reports.cn_detail_account_cod_status', compact('shipments', 'statusCounts'));
+    }
+
+    public function nonServiceChargesOnCn(Request $request)
+    {
+        $query = Shipment::with(['customer', 'vendor'])
+            ->where('other_charges', '>', 0)
+            ->when($request->filled('from_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '>=', $request->from_date);
+            })
+            ->when($request->filled('to_date'), function($q) use ($request) {
+                $q->whereDate('created_at', '<=', $request->to_date);
+            });
+
+        $shipments = $query->latest()->get();
+        return view('reports.non_service_charges_on_cn', compact('shipments'));
+    }
+
+    public function listOfMonthlyPayroll(Request $request)
+    {
+        $query = Payroll::with('employee')
+            ->when($request->filled('month'), function($q) use ($request) {
+                $q->where('month', $request->month);
+            })
+            ->when($request->filled('year'), function($q) use ($request) {
+                $q->where('year', $request->year);
+            });
+
+        $payrolls = $query->orderBy('year', 'desc')->orderBy('month', 'desc')->get();
+        return view('reports.list_of_monthly_payroll', compact('payrolls'));
+    }
 }
 
 

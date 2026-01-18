@@ -57,7 +57,7 @@ class DashboardController extends Controller
             })
             ->sortByDesc('total_cns')
             ->values();
-        
+
         // 3. Top 10 Problem CNs (Pending/Delayed)
         $problemCns = (clone $baseQuery)
             ->whereIn('status', ['in-transit', 'out-for-delivery', 'booked', 'picked-up'])
@@ -185,9 +185,9 @@ class DashboardController extends Controller
                 'count' => $stats['delayed_shipments'],
             ];
         }
-        
+
         return view('dashboard', compact(
-            'stats',
+            'stats', 
             'cityWorkload',
             'problemCns',
             'cnTrend',

@@ -260,7 +260,7 @@ class SystemController extends Controller
             DB::commit();
             Log::info('Data processed', ['type' => $type, 'user' => Auth::id()]);
             
-            return redirect()->route('system.data-processing')->with('success', 'Data processed successfully.');
+        return redirect()->route('system.data-processing')->with('success', 'Data processed successfully.');
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Data processing failed', ['error' => $e->getMessage()]);
@@ -354,7 +354,7 @@ class SystemController extends Controller
             DB::commit();
             Log::info('Data unposted', ['type' => $type, 'date_from' => $dateFrom, 'date_to' => $dateTo, 'user' => Auth::id(), 'reason' => $request->reason]);
             
-            return redirect()->route('system.unpost-data')->with('success', 'Data unposted successfully.');
+        return redirect()->route('system.unpost-data')->with('success', 'Data unposted successfully.');
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Unpost data failed', ['error' => $e->getMessage()]);

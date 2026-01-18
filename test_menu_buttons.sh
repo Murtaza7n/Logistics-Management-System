@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "=== TESTING ALL MENU BUTTONS ==="
+echo ""
+echo "Menu buttons to test:"
+echo "1. Logistics Reports (id: dropdownLogisticsReports)"
+echo "2. Finance (id: dropdownFinance)"
+echo "3. Finance Reports (id: dropdownFinanceReports)"
+echo "4. Purchases (id: dropdownPurchases)"
+echo "5. Payroll Section (id: dropdownPayrollSection)"
+echo "6. Admin (id: dropdownAdmin)"
+echo "7. Settings (id: dropdownSettings)"
+echo ""
+echo "Starting browser-based testing..."

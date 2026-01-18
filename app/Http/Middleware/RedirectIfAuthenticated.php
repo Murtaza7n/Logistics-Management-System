@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
                 // Role-based default landing page redirection
                 if ($user && $user->isAdmin()) {
                     // Admin: Redirect to dashboard
-                    return redirect('/dashboard');
+                return redirect('/dashboard');
                 } else {
                     // Employees (staff/driver): Redirect to CN Entry page
                     return redirect('/shipments');

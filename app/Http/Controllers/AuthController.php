@@ -54,7 +54,7 @@ class AuthController extends Controller
             // Role-based default landing page redirection
             if ($user->isAdmin()) {
                 // Admin: Redirect to dashboard (default behavior)
-                return redirect()->intended('/dashboard');
+            return redirect()->intended('/dashboard');
             } else {
                 // Employees (staff/driver): Redirect to CN Entry page
                 return redirect()->intended('/shipments');

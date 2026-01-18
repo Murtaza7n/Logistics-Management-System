@@ -1,0 +1,7 @@
+<?php $__env->startSection('title', 'Voucher'); ?>
+<?php $__env->startSection('content'); ?>
+<div class="page-header"><h1>Voucher</h1></div>
+<div class="card"><div class="card-body"><p>Voucher page. Under development.</p></div></div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/Logistics-Management-System/resources/views/vouchers/show.blade.php ENDPATH**/ ?>

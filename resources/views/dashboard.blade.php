@@ -255,35 +255,35 @@
                 <h3>{{ number_format($stats['today_cn_entries']) }}</h3>
                 <p>Today CN Entries</p>
                 <i class="bi bi-journal-text card-icon"></i>
-            </div>
+    </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2-4" style="flex: 0 0 20%; max-width: 20%;">
             <div class="summary-card warning position-relative">
                 <h3>{{ number_format($stats['pending_deliveries']) }}</h3>
-                <p>Pending Deliveries</p>
+            <p>Pending Deliveries</p>
                 <i class="bi bi-clock-history card-icon"></i>
-            </div>
+    </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2-4" style="flex: 0 0 20%; max-width: 20%;">
             <div class="summary-card success position-relative">
                 <h3>{{ number_format($stats['delivered_today']) }}</h3>
                 <p>Delivered Today</p>
                 <i class="bi bi-check-circle card-icon"></i>
-            </div>
+</div>
         </div>
         <div class="col-6 col-md-4 col-lg-2-4" style="flex: 0 0 20%; max-width: 20%;">
             <div class="summary-card danger position-relative">
                 <h3>{{ number_format($stats['delayed_shipments']) }}</h3>
                 <p>Delayed Shipments</p>
                 <i class="bi bi-x-circle card-icon"></i>
-            </div>
+    </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2-4" style="flex: 0 0 20%; max-width: 20%;">
             <div class="summary-card info position-relative">
                 <h3>{{ number_format($stats['active_cities']) }}</h3>
                 <p>Active Cities</p>
                 <i class="bi bi-geo-alt card-icon"></i>
-            </div>
+    </div>
         </div>
     </div>
 
@@ -294,14 +294,14 @@
             <div class="chart-container">
                 <h5><i class="bi bi-bar-chart"></i> City-Wise Workload</h5>
                 <canvas id="cityWorkloadChart" height="80"></canvas>
-            </div>
+</div>
 
             <!-- 4. CN Trend (Last 7 Days) -->
             <div class="chart-container">
                 <h5><i class="bi bi-graph-up"></i> CN Entries Trend (Last 7 Days)</h5>
                 <canvas id="cnTrendChart" height="80"></canvas>
             </div>
-        </div>
+                    </div>
 
         <!-- Right Column -->
         <div class="col-lg-4">
@@ -314,7 +314,7 @@
                         <i class="bi {{ $alert['icon'] }} alert-icon"></i>
                         <div class="flex-grow-1">
                             <strong>{{ $alert['message'] }}</strong>
-                        </div>
+                    </div>
                     </div>
                     @endforeach
                 @else
@@ -331,11 +331,11 @@
                 <div class="staff-stat">
                     <span>Total Staff:</span>
                     <strong>{{ number_format($staffOverview['total_staff']) }}</strong>
-                </div>
+        </div>
                 <div class="staff-stat">
                     <span>Active Staff:</span>
                     <strong>{{ number_format($staffOverview['active_staff']) }}</strong>
-                </div>
+    </div>
                 @if(count($cityWiseStaff) > 0)
                 <div class="mt-3">
                     <small class="text-muted d-block mb-2">City-wise Staff:</small>
@@ -343,7 +343,7 @@
                     <div class="staff-stat">
                         <span>{{ $city['name'] }}@if($city['code']) ({{ $city['code'] }})@endif:</span>
                         <strong>{{ $city['staff_count'] }}</strong>
-                    </div>
+</div>
                     @endforeach
                     @if(count($cityWiseStaff) > 5)
                     <small class="text-muted">+ {{ count($cityWiseStaff) - 5 }} more cities</small>
@@ -357,25 +357,25 @@
                 </div>
             </div>
         </div>
-    </div>
+            </div>
 
     <!-- 3. Top 10 Problem CNs -->
     <div class="problem-cns-table">
         <h5><i class="bi bi-exclamation-triangle"></i> Top 10 Problem CNs (Pending/Delayed)</h5>
         @if(count($problemCns) > 0)
-        <div class="table-responsive">
+                <div class="table-responsive">
             <table class="table table-hover mb-0">
-                <thead>
-                    <tr>
-                        <th>CN Number</th>
+                        <thead>
+                            <tr>
+                                <th>CN Number</th>
                         <th>Customer</th>
                         <th>City</th>
-                        <th>Status</th>
+                                <th>Status</th>
                         <th>Expected Date</th>
                         <th>Days Delayed</th>
-                    </tr>
-                </thead>
-                <tbody>
+                            </tr>
+                        </thead>
+                        <tbody>
                     @foreach($problemCns as $cn)
                     <tr class="cn-row {{ $cn->is_delayed ? 'delayed' : 'pending' }}" 
                         onclick="window.location.href='{{ route('shipments.show', $cn->shipment_id) }}'">
@@ -388,18 +388,18 @@
                             </span>
                         </td>
                         <td>{{ $cn->delivery_date ? \Carbon\Carbon::parse($cn->delivery_date)->format('M d, Y') : 'Not Set' }}</td>
-                        <td>
+                                <td>
                             @if($cn->is_delayed)
                                 <span class="badge bg-danger">{{ $cn->days_delayed }} days</span>
                             @else
                                 <span class="text-muted">-</span>
                             @endif
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
         @else
         <div class="text-center text-muted py-4">
             <i class="bi bi-check-circle" style="font-size: 2rem; opacity: 0.3;"></i>

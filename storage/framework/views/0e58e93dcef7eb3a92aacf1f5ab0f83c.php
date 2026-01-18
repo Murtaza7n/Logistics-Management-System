@@ -199,6 +199,11 @@
             position: relative;
             flex-shrink: 0;
             white-space: nowrap;
+            z-index: 100;
+        }
+        
+        .top-menu-item.dropdown {
+            z-index: 1000;
         }
 
         .top-menu-link {
@@ -212,6 +217,10 @@
             align-items: center;
             gap: 0.5rem;
             border-bottom: 3px solid transparent;
+            cursor: pointer;
+            pointer-events: auto;
+            position: relative;
+            z-index: 10;
         }
 
         .top-menu-link:hover {
@@ -240,6 +249,8 @@
             max-height: 400px;
             overflow-y: auto;
             overflow-x: hidden;
+            z-index: 1050;
+            position: absolute;
         }
         
         /* Custom scrollbar for dropdown menus */
@@ -277,6 +288,40 @@
             width: 20px;
             margin-right: 0.75rem;
             color: var(--secondary-color);
+        }
+
+        /* Nested Dropdown (Sub-menu) */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu > .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -0.5rem;
+            margin-left: 0.125rem;
+            min-width: 200px;
+        }
+
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu > .dropdown-item::after {
+            content: "\f285";
+            font-family: "bootstrap-icons";
+            float: right;
+            margin-left: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 991px) {
+            .dropdown-submenu > .dropdown-menu {
+                position: static;
+                float: none;
+                margin-left: 1rem;
+                margin-top: 0.25rem;
+            }
         }
 
         /* City Selector */
@@ -1236,7 +1281,8 @@
                     $hasLogistics = $user->isAdmin() || $menuService::userHasPermission($user, 'dashboard', 'view') || $menuService::userHasPermission($user, 'shipments.index', 'view');
                     $hasLogisticsReports = $user->isAdmin() || $menuService::userHasPermission($user, 'reports.cn-detail', 'view');
                     $hasFinance = $user->isAdmin() || $menuService::userHasPermission($user, 'invoices.index', 'view') || $menuService::userHasPermission($user, 'payments.index', 'view');
-                    $hasFinanceReports = $user->isAdmin() || $menuService::userHasPermission($user, 'reports.list-of-invoices', 'view');
+                    $hasFinanceReports = $user->isAdmin() || $menuService::userHasPermission($user, 'reports.list-of-invoices', 'view') || $menuService::userHasPermission($user, 'reports.list-of-pending-invoices', 'view');
+                    $hasPurchases = $user->isAdmin() || $menuService::userHasPermission($user, 'purchases.index', 'view');
                     $hasPayroll = $user->isAdmin() || $menuService::userHasPermission($user, 'payroll.departments', 'view');
                     $hasPayrollReports = $user->isAdmin() || $menuService::userHasPermission($user, 'reports.list-of-employees', 'view');
                     $hasSystem = $user->isAdmin() || $menuService::userHasPermission($user, 'system.change-password', 'view');
@@ -1245,11 +1291,39 @@
                 
                 <!-- S2E Logistics Module -->
                 <?php if($hasLogistics): ?>
-                <div class="top-menu-item">
-                    <a href="<?php echo e(route('dashboard')); ?>" 
-                       class="top-menu-link <?php echo e(request()->routeIs('dashboard') || request()->routeIs('shipments.*') || request()->routeIs('customers.*') || request()->routeIs('vendors.*') || request()->routeIs('vehicles.*') || request()->routeIs('drivers.*') ? 'active' : ''); ?>">
+                <div class="top-menu-item dropdown">
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('dashboard') || request()->routeIs('logistics.*') || request()->routeIs('shipments.*') || request()->routeIs('bookings.*') || request()->routeIs('vehicle-load-plans.*') || request()->routeIs('delivery-sheets.*') || request()->routeIs('pickup-sheets.*') || request()->routeIs('customers.*') || request()->routeIs('vendors.*') || request()->routeIs('vehicles.*') || request()->routeIs('drivers.*') ? 'active' : ''); ?>" 
+                       href="#" 
+                       role="button" 
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownS2ELogistics">
                         <span>S2E Logistics</span>
                     </a>
+                    <ul class="dropdown-menu">
+                        <!-- Initial Setup with Sub-menu -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Initial Setup
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.item-codes')); ?>">Item Codes</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.invoice-charges')); ?>">Invoice Charges</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.cargo-officers')); ?>">SPO / Cargo Officers</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.cargo-officer-stock-issue')); ?>">Cargo Office-wise CN Stock Issue</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-city-codes')); ?>">City Codes</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.zone-codes')); ?>">Zone Codes</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.party-area-rates')); ?>">Party or Area-wise Rate</a></li>
+                            </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('shipments.index')); ?>">C/N Entry</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vehicle-load-plans.index')); ?>">Vehicle Load Plan</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('delivery-sheets.index')); ?>">Delivery Sheet</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('pickup-sheets.index')); ?>">Pickup Sheet</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('invoices.index')); ?>">Invoices</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('logistics.party-fuel-rates')); ?>">Party Fuel Rates for CN</a></li>
+                    </ul>
                 </div>
                 <?php endif; ?>
 
@@ -1259,23 +1333,68 @@
                     <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('reports.*') ? 'active' : ''); ?>" 
                        href="#" 
                        role="button" 
-                       data-bs-toggle="dropdown">
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownLogisticsReports">
                         <span>Logistics Reports</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-detail')); ?>">C/Ns Detail</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-invoices')); ?>">List of Invoices</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-status')); ?>">C/N Status (Detail)</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-status')); ?>">C/N Status</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-profit-loss')); ?>">C/N Profit Loss</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.city-wise-profit-loss')); ?>">City-wise Profit Loss</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.shipper-wise-profit-loss')); ?>">Shipper-wise Profit Loss</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.delivery-cn-detail')); ?>">Delivery CN Detail</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.stock-in-transit')); ?>">Stock in Transit</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-in-stock')); ?>">C/N In-Stock</a></li>
+                        <!-- Sales Reports Sub-menu -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sales Reports
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-detail')); ?>">CN Detail</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-invoices')); ?>">List of Invoices</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-status')); ?>">CN Status</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-profit-loss')); ?>">CN Profit / Loss</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.city-wise-profit-loss')); ?>">City-wise Profit / Loss</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.shipper-wise-profit-loss')); ?>">Shipper-wise Profit / Loss</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.hub-wise-profit-loss')); ?>">Hub-wise Profit / Loss</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.spo-wise-profit-loss')); ?>">SPO-wise Profit / Loss</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.hub-wise-cn-detail')); ?>">Hub-wise CN Detail</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.transporter-wise-documents-detail')); ?>">Transporter-wise Documents Detail</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.zone-wise-profit-loss')); ?>">Zone-wise Profit / Loss</a></li>
+                            </ul>
+                        </li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.vehicle-usage')); ?>">Vehicle Usage</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.driver-performance')); ?>">Driver Performance</a></li>
+                        <!-- Edit Lists Sub-menu -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Edit Lists
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.cargo-officer-stock-issue')); ?>">SPO-wise CN Stock Issue List</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-missing-sn-numbers')); ?>">List of Missing SN Numbers</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-pending-invoices')); ?>">List of Pending Invoices</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.item-codes')); ?>">List of Item Codes</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-city-codes')); ?>">List of City Codes</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.city-code-hub-wise-list')); ?>">City Code Hub-wise List</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-vehicle-types')); ?>">List of Vehicle Types</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('master-data.cargo-officers')); ?>">List of SPO / Cargo Officers</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-rates')); ?>">List of Rates</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.party-wise-fuel-rate-list')); ?>">Party-wise Fuel Rate List</a></li>
+                            </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- Other Reports Sub-menu -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Other Reports
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.delivery-cn-detail')); ?>">Delivery CN Detail</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.group-party-outstanding')); ?>">Group / Party Outstanding with Sales Tax</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-invoices-sales-tax')); ?>">List of Invoices (Sales Tax Invoice)</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-detail-account-cod')); ?>">CN Detail Account (COD)</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.delivery-sheet-cod-detail')); ?>">Delivery Sheet COD Detail</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-detail-account-cod-status')); ?>">CN Detail Account COD Status</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.stock-in-transit')); ?>">Stock In Transit</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.cn-in-stock')); ?>">CN In Stock</a></li>
+                                <li><a class="dropdown-item" href="<?php echo e(route('reports.non-service-charges-on-cn')); ?>">Non-Service Charges on CN</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <?php endif; ?>
@@ -1283,17 +1402,68 @@
                 <!-- Finance -->
                 <?php if($hasFinance): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('invoices.*') || request()->routeIs('payments.*') || request()->routeIs('reports.list-of-*') || request()->routeIs('reports.group-party-*') ? 'active' : ''); ?>" 
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('finance.*') || request()->routeIs('vouchers.*') || request()->routeIs('chart-of-accounts.*') || request()->routeIs('invoices.*') || request()->routeIs('payments.*') ? 'active' : ''); ?>" 
                        href="#" 
                        role="button" 
-                       data-bs-toggle="dropdown">
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownFinance">
                         <span>Finance</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo e(route('invoices.index')); ?>">Invoices</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('payments.index')); ?>">Payments</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.group-codes')); ?>">Group Codes</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.control-codes')); ?>">Control Codes</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('chart-of-accounts.index')); ?>">Chart of Accounts</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.account-grouping')); ?>">Account Grouping</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><h6 class="dropdown-header">Finance Reports</h6></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vouchers.create', 'bpv')); ?>">BPV – Bank Payment Voucher</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vouchers.create', 'brv')); ?>">BRV – Bank Receipt Voucher</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vouchers.create', 'cpv')); ?>">CPV – Cash Payment Voucher</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vouchers.create', 'crv')); ?>">CRV – Cash Receipt Voucher</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vouchers.create', 'jvr')); ?>">JVR – Journal Voucher</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.balance-sheet')); ?>">Balance Sheet</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.profit-loss')); ?>">Profit & Loss</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.change-voucher-date')); ?>">Change Voucher Date</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.list-of-chart-of-accounts')); ?>">List of Chart of Accounts</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('vouchers.index')); ?>">List of Vouchers</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.cn-wise-expenses-detail')); ?>">CN-wise Expenses Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.trial-balance')); ?>">Trial Balance</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.master-schedule')); ?>">Master Schedule</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.accounts-ledger')); ?>">Accounts Ledger</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.profit-loss-comparative')); ?>">Profit & Loss (Comparative)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.month-wise-closing-balance-breakup')); ?>">Month-wise Closing Balance Break-up</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.group-outstanding-detail')); ?>">Group Outstanding Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.group-ledger')); ?>">Group Ledger</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.trial-balance-console')); ?>">Trial Balance (Console)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.master-schedule-console')); ?>">Master Schedule (Console)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.accounts-ledger-console')); ?>">Accounts Ledger (Console)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.pl-comparative-console')); ?>">P/L Comparative (Console)</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.account-grouping-detail')); ?>">Account Grouping Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.sales-tax-register-invoice-wise')); ?>">Sales Tax Register (Invoice-wise)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.sales-tax-register-customer-wise')); ?>">Sales Tax Register (Customer-wise)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.party-wise-outstanding-detailed')); ?>">Party-wise Outstanding Detailed</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.party-wise-outstanding-aging')); ?>">Party-wise Outstanding (Aging)</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('finance.party-wise-cleared-outstanding-detail')); ?>">Party-wise Cleared & Outstanding Detail</a></li>
+                    </ul>
+                </div>
+                <?php endif; ?>
+
+                <!-- Finance Reports -->
+                <?php if($hasFinanceReports): ?>
+                <div class="top-menu-item dropdown">
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('reports.list-of-*') || request()->routeIs('reports.group-party-*') ? 'active' : ''); ?>" 
+                       href="#" 
+                       role="button" 
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownFinanceReports">
+                        <span>Finance Reports</span>
+                    </a>
+                    <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-invoices')); ?>">List of Invoices</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-pending-invoices')); ?>">List of Pending Invoices</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-missing-cn-nos')); ?>">List of Missing C/N Nos.</a></li>
@@ -1306,33 +1476,50 @@
                 </div>
                 <?php endif; ?>
 
-                <!-- Payroll (Merged with Payroll Reports) -->
-                <?php if(($user->isAdmin() || $user->isStaff()) && ($hasPayroll || $hasPayrollReports)): ?>
+                <!-- Purchases -->
+                <?php if($hasPurchases): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('payroll.*') || request()->routeIs('reports.list-of-employees') || request()->routeIs('reports.list-of-monthly-deduction-allowances') || request()->routeIs('reports.employees-*') || request()->routeIs('reports.department-wise-monthly-payroll-register') || request()->routeIs('payrolls.*') ? 'active' : ''); ?>" href="#" role="button" data-bs-toggle="dropdown">
-                        <span>Payroll</span>
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('purchases.*') ? 'active' : ''); ?>" 
+                       href="#" 
+                       role="button" 
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownPurchases">
+                        <span>Purchases</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <?php if($hasPayroll): ?>
+                        <li><a class="dropdown-item" href="<?php echo e(route('purchases.index')); ?>">Purchases List</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('purchases.create')); ?>">Add Purchase</a></li>
+                    </ul>
+                </div>
+                <?php endif; ?>
+
+                <!-- Payroll Section -->
+                <?php if(($user->isAdmin() || $user->isStaff()) && ($hasPayroll || $hasPayrollReports)): ?>
+                <div class="top-menu-item dropdown">
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('payroll.*') || request()->routeIs('reports.list-of-employees') || request()->routeIs('reports.list-of-monthly-deduction-allowances') || request()->routeIs('reports.employees-*') || request()->routeIs('reports.department-wise-monthly-payroll-register') || request()->routeIs('payrolls.*') ? 'active' : ''); ?>" 
+                       href="#" 
+                       role="button" 
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownPayrollSection">
+                        <span>Payroll Section</span>
+                    </a>
+                    <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?php echo e(route('payroll.departments')); ?>">Department Codes</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('payroll.designations')); ?>">Designation Codes</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('payroll.employee-master')); ?>">Employee Master File</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('payroll.loans')); ?>">Loan Master File</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.deductions-allowances')); ?>">Monthly Deduction/Allowances</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('payroll.deductions-allowances')); ?>">Monthly Deduction / Allowances</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('payroll.authorized-leaves')); ?>">Authorized Leaves</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('payroll.monthly-payroll-processing')); ?>">Monthly Payroll Processing</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('payrolls.index')); ?>">Payroll Records</a></li>
-                        <?php endif; ?>
-                        <?php if($hasPayrollReports): ?>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><h6 class="dropdown-header">Payroll Reports</h6></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-employees')); ?>">List of Employees</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-monthly-deduction-allowances')); ?>">List of Monthly Deduction/Allowances</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.employees-authorized-leaves-detail')); ?>">Employee's Authorized Leaves Detail</a></li>
-                        <li><a class="dropdown-item" href="<?php echo e(route('reports.employees-leaves-status')); ?>">Employee's Leaves Status</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-monthly-payroll')); ?>">List of Monthly Payroll</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.list-of-monthly-deduction-allowances')); ?>">Deduction / Allowances List</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.employees-authorized-leaves-detail')); ?>">Employee Authorized Leaves Detail</a></li>
+                        <li><a class="dropdown-item" href="<?php echo e(route('reports.employees-leaves-status')); ?>">Employee Leave Status</a></li>
                         <li><a class="dropdown-item" href="<?php echo e(route('reports.department-wise-monthly-payroll-register')); ?>">Department-wise Monthly Payroll Register</a></li>
-                        <?php endif; ?>
                     </ul>
                 </div>
                 <?php endif; ?>
@@ -1340,7 +1527,12 @@
                 <!-- Administration -->
                 <?php if($hasAdmin): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="top-menu-link dropdown-toggle" 
+                       href="#" 
+                       role="button" 
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownAdmin">
                         <span>Admin</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -1354,56 +1546,35 @@
                 </div>
                 <?php endif; ?>
                 
-                <!-- System -->
+                <!-- Settings -->
                 <?php if($hasSystem): ?>
                 <div class="top-menu-item dropdown">
-                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('system.*') ? 'active' : ''); ?>" href="#" role="button" data-bs-toggle="dropdown">
-                        <span>System</span>
+                    <a class="top-menu-link dropdown-toggle <?php echo e(request()->routeIs('system.*') || request()->routeIs('users.*') ? 'active' : ''); ?>" 
+                       href="#" 
+                       role="button" 
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false"
+                       id="dropdownSettings">
+                        <span>Settings</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <?php if($user->isAdmin() || $user->isStaff()): ?>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('users.*') ? 'active' : ''); ?>" href="<?php echo e(route('users.index')); ?>">
-                            Users
-                        </a></li>
-                        <?php endif; ?>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('users.*') ? 'active' : ''); ?>" href="<?php echo e(route('users.index')); ?>">Users</a></li>
                         <?php if($user->isAdmin()): ?>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.user-roles') ? 'active' : ''); ?>" href="<?php echo e(route('system.user-roles')); ?>">
-                            User Roles
-                        </a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.user-roles') ? 'active' : ''); ?>" href="<?php echo e(route('system.user-roles')); ?>">User Roles</a></li>
                         <?php endif; ?>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.change-password') ? 'active' : ''); ?>" href="<?php echo e(route('system.change-password')); ?>">
-                            Change Password
-                        </a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.change-password') ? 'active' : ''); ?>" href="<?php echo e(route('system.change-password')); ?>">Change Password</a></li>
                         <?php if(auth()->user()->isAdmin()): ?>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.change-year') ? 'active' : ''); ?>" href="<?php echo e(route('system.change-year')); ?>">
-                            Change Year
-                        </a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.change-year') ? 'active' : ''); ?>" href="<?php echo e(route('system.change-year')); ?>">Change Year</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.initialize-data') ? 'active' : ''); ?>" href="<?php echo e(route('system.initialize-data')); ?>">
-                            Initialize Data for re-processing
-                        </a></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.data-processing') ? 'active' : ''); ?>" href="<?php echo e(route('system.data-processing')); ?>">
-                            Data Processing
-                        </a></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.payroll-processing-final') ? 'active' : ''); ?>" href="<?php echo e(route('system.payroll-processing-final')); ?>">
-                            Payroll Processing - (FINAL)
-                        </a></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.optimization') ? 'active' : ''); ?>" href="<?php echo e(route('system.optimization')); ?>">
-                            System Optimization
-                        </a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.initialize-data') ? 'active' : ''); ?>" href="<?php echo e(route('system.initialize-data')); ?>">Initialize Data for Re-processing</a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.data-processing') ? 'active' : ''); ?>" href="<?php echo e(route('system.data-processing')); ?>">Data Processing</a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.payroll-processing-final') ? 'active' : ''); ?>" href="<?php echo e(route('system.payroll-processing-final')); ?>">Payroll Processing (FINAL)</a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.optimization') ? 'active' : ''); ?>" href="<?php echo e(route('system.optimization')); ?>">System Optimization</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.unvoid-cn') ? 'active' : ''); ?>" href="<?php echo e(route('system.unvoid-cn')); ?>">
-                            Un-Void C/N
-                        </a></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.email-settings') ? 'active' : ''); ?>" href="<?php echo e(route('system.email-settings')); ?>">
-                            E-mail Setting
-                        </a></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.inter-branches-jv') ? 'active' : ''); ?>" href="<?php echo e(route('system.inter-branches-jv')); ?>">
-                            Inter Branches J.V Code
-                        </a></li>
-                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.unpost-data') ? 'active' : ''); ?>" href="<?php echo e(route('system.unpost-data')); ?>">
-                            Un-Post Data with Date Range
-                        </a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.unvoid-cn') ? 'active' : ''); ?>" href="<?php echo e(route('system.unvoid-cn')); ?>">Un-Void CN</a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.email-settings') ? 'active' : ''); ?>" href="<?php echo e(route('system.email-settings')); ?>">Email Settings</a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.inter-branches-jv') ? 'active' : ''); ?>" href="<?php echo e(route('system.inter-branches-jv')); ?>">Inter Branches J.V Code</a></li>
+                        <li><a class="dropdown-item <?php echo e(request()->routeIs('system.unpost-data') ? 'active' : ''); ?>" href="<?php echo e(route('system.unpost-data')); ?>">Un-Post Data with Date Range</a></li>
                         <?php endif; ?>
                     </ul>
                 </div>
@@ -1497,10 +1668,10 @@
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery (Load First) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
     <!-- Footer - Deep Navy Blue (Static Footer - Consistent on All Pages) -->
     <footer class="footer py-4" style="background-color: var(--deep-navy-blue); color: var(--clean-white); flex-shrink: 0; width: 100%; margin-top: 2rem; position: relative; z-index: 1;">
@@ -1530,6 +1701,129 @@
             </div>
         </div>
     </footer>
+
+    <!-- Initialize Bootstrap Dropdowns - COMPLETE FIX -->
+    <script>
+        (function() {
+            'use strict';
+            
+            function initAllDropdowns() {
+                // Check if Bootstrap is loaded
+                if (typeof bootstrap === 'undefined' || typeof bootstrap.Dropdown === 'undefined') {
+                    console.warn('Bootstrap not loaded yet, retrying...');
+                    setTimeout(initAllDropdowns, 200);
+                    return;
+                }
+                
+                console.log('Initializing dropdowns...');
+                
+                // Initialize all dropdowns with data-bs-toggle="dropdown"
+                var dropdownElements = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+                var dropdownInstances = [];
+                
+                dropdownElements.forEach(function(element) {
+                    try {
+                        // Dispose existing instance if any
+                        var existing = bootstrap.Dropdown.getInstance(element);
+                        if (existing) {
+                            existing.dispose();
+                        }
+                        
+                        // Create new dropdown instance
+                        var dropdown = new bootstrap.Dropdown(element, {
+                            boundary: 'viewport',
+                            offset: [0, 2]
+                        });
+                        
+                        dropdownInstances.push({
+                            element: element,
+                            instance: dropdown
+                        });
+                        
+                        // Add click handler to prevent default navigation
+                        element.addEventListener('click', function(e) {
+                            var href = this.getAttribute('href');
+                            if (href === '#' || href === '' || !href) {
+                                e.preventDefault();
+                            }
+                        });
+                        
+                    } catch (error) {
+                        console.error('Error initializing dropdown:', error, element);
+                    }
+                });
+                
+                // Handle nested dropdowns (submenus) - Manual toggle
+                document.querySelectorAll('.dropdown-submenu > .dropdown-item.dropdown-toggle').forEach(function(element) {
+                    element.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        var parent = this.closest('.dropdown-submenu');
+                        var submenu = this.nextElementSibling;
+                        
+                        if (!parent || !submenu) return;
+                        
+                        var isOpen = parent.classList.contains('show');
+                        
+                        // Close all other submenus
+                        document.querySelectorAll('.dropdown-submenu').forEach(function(item) {
+                            if (item !== parent) {
+                                item.classList.remove('show');
+                                var menu = item.querySelector('.dropdown-menu');
+                                if (menu) menu.classList.remove('show');
+                            }
+                        });
+                        
+                        // Toggle current submenu
+                        if (isOpen) {
+                            parent.classList.remove('show');
+                            submenu.classList.remove('show');
+                        } else {
+                            parent.classList.add('show');
+                            submenu.classList.add('show');
+                        }
+                    });
+                });
+                
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e) {
+                    var clickedDropdown = e.target.closest('.dropdown');
+                    
+                    if (!clickedDropdown) {
+                        // Clicked outside, close all dropdowns
+                        dropdownInstances.forEach(function(item) {
+                            try {
+                                if (item.instance && item.instance._isShown()) {
+                                    item.instance.hide();
+                                }
+                            } catch (err) {
+                                // Ignore errors
+                            }
+                        });
+                        
+                        // Close all submenus
+                        document.querySelectorAll('.dropdown-submenu.show').forEach(function(item) {
+                            item.classList.remove('show');
+                            var menu = item.querySelector('.dropdown-menu');
+                            if (menu) menu.classList.remove('show');
+                        });
+                    }
+                });
+                
+                console.log('✅ Dropdowns initialized successfully. Total:', dropdownInstances.length);
+            }
+            
+            // Initialize when ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(initAllDropdowns, 100);
+                });
+            } else {
+                setTimeout(initAllDropdowns, 100);
+            }
+        })();
+    </script>
 
     <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>

@@ -44,7 +44,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::AIuJt6Fn0hoErhde',
+            '_route' => 'generated::a5kA63TinlOryYmj',
           ),
           1 => NULL,
           2 => 
@@ -81,7 +81,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::9N2lms2hRxO3R9aH',
+            '_route' => 'generated::tQKgk8Ugoihax1o1',
           ),
           1 => NULL,
           2 => 
@@ -139,7 +139,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Jev4jasT6rdYLeci',
+            '_route' => 'generated::xcsjsWomSVQzv8xZ',
           ),
           1 => NULL,
           2 => 
@@ -672,6 +672,1186 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/logistics/initial-setup' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.initial-setup',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/logistics/other-cn-expense-sheet' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.other-cn-expense-sheet',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.store-expense-sheet',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/logistics/cn-delivery-reference-no' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.cn-delivery-reference-no',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.store-delivery-reference',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/logistics/party-fuel-rates' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.party-fuel-rates',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'logistics.store-fuel-rate',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/group-codes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.group-codes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/control-codes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.control-codes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/account-grouping' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.account-grouping',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/balance-sheet' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.balance-sheet',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/profit-loss' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.profit-loss',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/change-voucher-date' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.change-voucher-date',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/list-of-chart-of-accounts' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.list-of-chart-of-accounts',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/cn-wise-expenses-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.cn-wise-expenses-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/trial-balance' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.trial-balance',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/master-schedule' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.master-schedule',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/accounts-ledger' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.accounts-ledger',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/profit-loss-comparative' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.profit-loss-comparative',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/month-wise-closing-balance-breakup' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.month-wise-closing-balance-breakup',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/group-outstanding-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.group-outstanding-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/group-ledger' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.group-ledger',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/trial-balance-console' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.trial-balance-console',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/master-schedule-console' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.master-schedule-console',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/accounts-ledger-console' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.accounts-ledger-console',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/pl-comparative-console' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.pl-comparative-console',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/account-grouping-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.account-grouping-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/sales-tax-register-invoice-wise' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.sales-tax-register-invoice-wise',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/sales-tax-register-customer-wise' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.sales-tax-register-customer-wise',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/party-wise-outstanding-detailed' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.party-wise-outstanding-detailed',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/party-wise-outstanding-aging' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.party-wise-outstanding-aging',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/finance/party-wise-cleared-outstanding-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'finance.party-wise-cleared-outstanding-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/chart-of-accounts' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/chart-of-accounts/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/vouchers' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vouchers.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vouchers.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/item-codes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.item-codes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.item-codes.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/container-sizes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.container-sizes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.container-sizes.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/invoice-charges' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.invoice-charges',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.invoice-charges.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/cargo-officers' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.cargo-officers',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.cargo-officers.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/cargo-officer-stock-issue' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.cargo-officer-stock-issue',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/zone-codes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.zone-codes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.zone-codes.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/master-data/party-area-rates' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.party-area-rates',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.party-area-rates.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/bookings' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'bookings.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'bookings.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/bookings/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'bookings.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/vehicle-load-plans' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/vehicle-load-plans/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/delivery-sheets' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/delivery-sheets/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/pickup-sheets' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/pickup-sheets/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/shipments' => 
       array (
         0 => 
@@ -991,6 +2171,46 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/purchases' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'purchases.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/purchases/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'purchases.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/cities' => 
       array (
         0 => 
@@ -1223,6 +2443,186 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/reports/hub-wise-profit-loss' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.hub-wise-profit-loss',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/spo-wise-profit-loss' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.spo-wise-profit-loss',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/hub-wise-cn-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.hub-wise-cn-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/transporter-wise-documents-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.transporter-wise-documents-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/zone-wise-profit-loss' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.zone-wise-profit-loss',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/list-of-missing-sn-numbers' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.list-of-missing-sn-numbers',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/city-code-hub-wise-list' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.city-code-hub-wise-list',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/list-of-rates' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.list-of-rates',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/party-wise-fuel-rate-list' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.party-wise-fuel-rate-list',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/reports/delivery-cn-detail' => 
       array (
         0 => 
@@ -1270,6 +2670,106 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'reports.cn-in-stock',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/list-of-invoices-sales-tax' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.list-of-invoices-sales-tax',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/cn-detail-account-cod' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.cn-detail-account-cod',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/delivery-sheet-cod-detail' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.delivery-sheet-cod-detail',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/cn-detail-account-cod-status' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.cn-detail-account-cod-status',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/non-service-charges-on-cn' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.non-service-charges-on-cn',
           ),
           1 => NULL,
           2 => 
@@ -1530,6 +3030,26 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'reports.list-of-employees',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/reports/list-of-monthly-payroll' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'reports.list-of-monthly-payroll',
           ),
           1 => NULL,
           2 => 
@@ -2009,7 +3529,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/users/([^/]++)(?|(*:25)|/edit(*:37)|(*:44))|/employees/([^/]++)(?|(*:74)|/edit(*:86)|(*:93))|/pay(?|roll(?|s/([^/]++)(?|(*:128)|/(?|edit(*:144)|payslip(*:159))|(*:168))|/(?|de(?|partments/([^/]++)(?|(*:207))|signations/([^/]++)(?|(*:238)))|loans/([^/]++)(?|(*:265))))|ments/([^/]++)(?|(*:293)|/edit(*:306)|(*:314)))|/c(?|ustomers/([^/]++)(?|(*:349)|/edit(*:362)|(*:370))|ities/(?|([^/]++)(?|(*:399)|/toggle\\-status(*:422))|switch(*:437)|accessible(*:455))|n\\-books/([^/]++)(?|(*:484)|/(?|edit(*:500)|re(?|fresh\\-counts(*:526)|maining\\-numbers(*:550)))|(*:560)))|/ve(?|ndors/([^/]++)(?|(*:593)|/edit(*:606)|(*:614))|hicles/([^/]++)(?|(*:641)|/edit(*:654)|(*:662)))|/shipments/([^/]++)(?|(*:694)|/edit(*:707)|(*:715))|/drivers/([^/]++)(?|(*:744)|/edit(*:757)|(*:765))|/invoices/([^/]++)(?|(*:795)|/(?|edit(*:811)|status(*:825))|(*:834)))/?$}sDu',
+      0 => '{^(?|/users/([^/]++)(?|(*:25)|/edit(*:37)|(*:44))|/employees/([^/]++)(?|(*:74)|/edit(*:86)|(*:93))|/p(?|ay(?|roll(?|s/([^/]++)(?|(*:131)|/(?|edit(*:147)|payslip(*:162))|(*:171))|/(?|de(?|partments/([^/]++)(?|(*:210))|signations/([^/]++)(?|(*:241)))|loans/([^/]++)(?|(*:268))))|ments/([^/]++)(?|(*:296)|/edit(*:309)|(*:317)))|ickup\\-sheets/([^/]++)(?|(*:352)|/edit(*:365)|(*:373)))|/c(?|ustomers/([^/]++)(?|(*:408)|/edit(*:421)|(*:429))|hart\\-of\\-accounts/([^/]++)(?|(*:468)|/edit(*:481)|(*:489))|ities/(?|([^/]++)(?|(*:518)|/toggle\\-status(*:541))|switch(*:556)|accessible(*:574))|n\\-books/([^/]++)(?|(*:603)|/(?|edit(*:619)|re(?|fresh\\-counts(*:645)|maining\\-numbers(*:669)))|(*:679)))|/v(?|e(?|ndors/([^/]++)(?|(*:715)|/edit(*:728)|(*:736))|hicle(?|\\-load\\-plans/(?|([^/]++)(?|(*:781)|/edit(*:794)|(*:802))|received(*:819))|s/([^/]++)(?|(*:841)|/edit(*:854)|(*:862))))|ouchers/(?|create(?:/([^/]++))?(*:904)|([^/]++)(?|(*:923)|/edit(*:936)|(*:944))))|/master\\-data/(?|i(?|tem\\-codes/([^/]++)(?|(*:998))|nvoice\\-charges/([^/]++)(?|(*:1034)))|c(?|ontainer\\-sizes/([^/]++)(?|(*:1076))|argo\\-officers/([^/]++)(?|(*:1112)))|zone\\-codes/([^/]++)(?|(*:1146))|party\\-area\\-rates/([^/]++)(?|(*:1186)))|/bookings/([^/]++)(?|(*:1218)|/edit(*:1232)|(*:1241))|/d(?|elivery\\-sheets/([^/]++)(?|(*:1283)|/edit(*:1297)|(*:1306))|rivers/([^/]++)(?|(*:1334)|/edit(*:1348)|(*:1357)))|/shipments/([^/]++)(?|(*:1390)|/edit(*:1404)|(*:1413))|/invoices/([^/]++)(?|(*:1444)|/(?|edit(*:1461)|status(*:1476))|(*:1486)))/?$}sDu',
     ),
     3 => 
     array (
@@ -2189,7 +3709,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      128 => 
+      131 => 
       array (
         0 => 
         array (
@@ -2212,7 +3732,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      144 => 
+      147 => 
       array (
         0 => 
         array (
@@ -2235,7 +3755,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      159 => 
+      162 => 
       array (
         0 => 
         array (
@@ -2258,7 +3778,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      168 => 
+      171 => 
       array (
         0 => 
         array (
@@ -2300,7 +3820,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      207 => 
+      210 => 
       array (
         0 => 
         array (
@@ -2341,7 +3861,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      238 => 
+      241 => 
       array (
         0 => 
         array (
@@ -2382,7 +3902,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      265 => 
+      268 => 
       array (
         0 => 
         array (
@@ -2423,7 +3943,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      293 => 
+      296 => 
       array (
         0 => 
         array (
@@ -2446,7 +3966,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      306 => 
+      309 => 
       array (
         0 => 
         array (
@@ -2469,7 +3989,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      314 => 
+      317 => 
       array (
         0 => 
         array (
@@ -2511,7 +4031,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      349 => 
+      352 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.show',
+          ),
+          1 => 
+          array (
+            0 => 'pickup_sheet',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      365 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.edit',
+          ),
+          1 => 
+          array (
+            0 => 'pickup_sheet',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      373 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.update',
+          ),
+          1 => 
+          array (
+            0 => 'pickup_sheet',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'pickup-sheets.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'pickup_sheet',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      408 => 
       array (
         0 => 
         array (
@@ -2534,7 +4142,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      362 => 
+      421 => 
       array (
         0 => 
         array (
@@ -2557,7 +4165,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      370 => 
+      429 => 
       array (
         0 => 
         array (
@@ -2599,7 +4207,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      399 => 
+      468 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.show',
+          ),
+          1 => 
+          array (
+            0 => 'chart_of_account',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      481 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.edit',
+          ),
+          1 => 
+          array (
+            0 => 'chart_of_account',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      489 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.update',
+          ),
+          1 => 
+          array (
+            0 => 'chart_of_account',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'chart-of-accounts.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'chart_of_account',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      518 => 
       array (
         0 => 
         array (
@@ -2621,7 +4317,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      422 => 
+      541 => 
       array (
         0 => 
         array (
@@ -2643,7 +4339,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      437 => 
+      556 => 
       array (
         0 => 
         array (
@@ -2664,7 +4360,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      455 => 
+      574 => 
       array (
         0 => 
         array (
@@ -2686,7 +4382,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      484 => 
+      603 => 
       array (
         0 => 
         array (
@@ -2709,7 +4405,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      500 => 
+      619 => 
       array (
         0 => 
         array (
@@ -2732,7 +4428,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      526 => 
+      645 => 
       array (
         0 => 
         array (
@@ -2754,7 +4450,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      550 => 
+      669 => 
       array (
         0 => 
         array (
@@ -2777,7 +4473,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      560 => 
+      679 => 
       array (
         0 => 
         array (
@@ -2819,7 +4515,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      593 => 
+      715 => 
       array (
         0 => 
         array (
@@ -2842,7 +4538,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      606 => 
+      728 => 
       array (
         0 => 
         array (
@@ -2865,7 +4561,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      614 => 
+      736 => 
       array (
         0 => 
         array (
@@ -2907,7 +4603,116 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      641 => 
+      781 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.show',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      794 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.edit',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      802 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      819 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vehicle-load-plans.received',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      841 => 
       array (
         0 => 
         array (
@@ -2930,7 +4735,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      654 => 
+      854 => 
       array (
         0 => 
         array (
@@ -2953,7 +4758,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      662 => 
+      862 => 
       array (
         0 => 
         array (
@@ -2995,17 +4800,18 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      694 => 
+      904 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'shipments.show',
+            '_route' => 'vouchers.create',
+            'type' => NULL,
           ),
           1 => 
           array (
-            0 => 'shipment',
+            0 => 'type',
           ),
           2 => 
           array (
@@ -3018,17 +4824,40 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      707 => 
+      923 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'shipments.edit',
+            '_route' => 'vouchers.show',
           ),
           1 => 
           array (
-            0 => 'shipment',
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      936 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vouchers.edit',
+          ),
+          1 => 
+          array (
+            0 => 'id',
           ),
           2 => 
           array (
@@ -3041,17 +4870,350 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      715 => 
+      944 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'shipments.update',
+            '_route' => 'vouchers.update',
           ),
           1 => 
           array (
-            0 => 'shipment',
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'vouchers.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      998 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.item-codes.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.item-codes.delete',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1034 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.invoice-charges.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.invoice-charges.delete',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1076 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.container-sizes.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.container-sizes.delete',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1112 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.cargo-officers.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.cargo-officers.delete',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1146 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.zone-codes.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.zone-codes.delete',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1186 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.party-area-rates.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'master-data.party-area-rates.delete',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1218 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'bookings.show',
+          ),
+          1 => 
+          array (
+            0 => 'booking',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1232 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'bookings.edit',
+          ),
+          1 => 
+          array (
+            0 => 'booking',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      1241 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'bookings.update',
+          ),
+          1 => 
+          array (
+            0 => 'booking',
           ),
           2 => 
           array (
@@ -3067,11 +5229,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'shipments.destroy',
+            '_route' => 'bookings.destroy',
           ),
           1 => 
           array (
-            0 => 'shipment',
+            0 => 'booking',
           ),
           2 => 
           array (
@@ -3083,7 +5245,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      744 => 
+      1283 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.show',
+          ),
+          1 => 
+          array (
+            0 => 'delivery_sheet',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1297 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.edit',
+          ),
+          1 => 
+          array (
+            0 => 'delivery_sheet',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      1306 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.update',
+          ),
+          1 => 
+          array (
+            0 => 'delivery_sheet',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delivery-sheets.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'delivery_sheet',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1334 => 
       array (
         0 => 
         array (
@@ -3106,7 +5356,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      757 => 
+      1348 => 
       array (
         0 => 
         array (
@@ -3129,7 +5379,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      765 => 
+      1357 => 
       array (
         0 => 
         array (
@@ -3171,7 +5421,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      795 => 
+      1390 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'shipments.show',
+          ),
+          1 => 
+          array (
+            0 => 'shipment',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1404 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'shipments.edit',
+          ),
+          1 => 
+          array (
+            0 => 'shipment',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      1413 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'shipments.update',
+          ),
+          1 => 
+          array (
+            0 => 'shipment',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'shipments.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'shipment',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1444 => 
       array (
         0 => 
         array (
@@ -3194,7 +5532,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      811 => 
+      1461 => 
       array (
         0 => 
         array (
@@ -3217,7 +5555,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      825 => 
+      1476 => 
       array (
         0 => 
         array (
@@ -3239,7 +5577,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      834 => 
+      1486 => 
       array (
         0 => 
         array (
@@ -3333,7 +5671,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::AIuJt6Fn0hoErhde' => 
+    'generated::a5kA63TinlOryYmj' => 
     array (
       'methods' => 
       array (
@@ -3350,13 +5688,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000049e0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006cf0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::AIuJt6Fn0hoErhde',
+        'as' => 'generated::a5kA63TinlOryYmj',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3409,7 +5747,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::9N2lms2hRxO3R9aH' => 
+    'generated::tQKgk8Ugoihax1o1' => 
     array (
       'methods' => 
       array (
@@ -3429,7 +5767,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::9N2lms2hRxO3R9aH',
+        'as' => 'generated::tQKgk8Ugoihax1o1',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3519,7 +5857,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Jev4jasT6rdYLeci' => 
+    'generated::xcsjsWomSVQzv8xZ' => 
     array (
       'methods' => 
       array (
@@ -3541,7 +5879,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Jev4jasT6rdYLeci',
+        'as' => 'generated::xcsjsWomSVQzv8xZ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5666,6 +8004,3810 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'logistics.initial-setup' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'logistics/initial-setup',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@initialSetup',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@initialSetup',
+        'as' => 'logistics.initial-setup',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'logistics.other-cn-expense-sheet' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'logistics/other-cn-expense-sheet',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@otherCnExpenseSheet',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@otherCnExpenseSheet',
+        'as' => 'logistics.other-cn-expense-sheet',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'logistics.store-expense-sheet' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'logistics/other-cn-expense-sheet',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@storeExpenseSheet',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@storeExpenseSheet',
+        'as' => 'logistics.store-expense-sheet',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'logistics.cn-delivery-reference-no' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'logistics/cn-delivery-reference-no',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@cnDeliveryReferenceNo',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@cnDeliveryReferenceNo',
+        'as' => 'logistics.cn-delivery-reference-no',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'logistics.store-delivery-reference' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'logistics/cn-delivery-reference-no',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@storeDeliveryReference',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@storeDeliveryReference',
+        'as' => 'logistics.store-delivery-reference',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'logistics.party-fuel-rates' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'logistics/party-fuel-rates',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@partyFuelRates',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@partyFuelRates',
+        'as' => 'logistics.party-fuel-rates',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'logistics.store-fuel-rate' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'logistics/party-fuel-rates',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LogisticsController@storeFuelRate',
+        'controller' => 'App\\Http\\Controllers\\LogisticsController@storeFuelRate',
+        'as' => 'logistics.store-fuel-rate',
+        'namespace' => NULL,
+        'prefix' => '/logistics',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.group-codes' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/group-codes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@groupCodes',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@groupCodes',
+        'as' => 'finance.group-codes',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.control-codes' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/control-codes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@controlCodes',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@controlCodes',
+        'as' => 'finance.control-codes',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.account-grouping' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/account-grouping',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@accountGroups',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@accountGroups',
+        'as' => 'finance.account-grouping',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.balance-sheet' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/balance-sheet',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@balanceSheet',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@balanceSheet',
+        'as' => 'finance.balance-sheet',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.profit-loss' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/profit-loss',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@profitLoss',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@profitLoss',
+        'as' => 'finance.profit-loss',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.change-voucher-date' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/change-voucher-date',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@changeVoucherDate',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@changeVoucherDate',
+        'as' => 'finance.change-voucher-date',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.list-of-chart-of-accounts' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/list-of-chart-of-accounts',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@listOfChartOfAccounts',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@listOfChartOfAccounts',
+        'as' => 'finance.list-of-chart-of-accounts',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.cn-wise-expenses-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/cn-wise-expenses-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@cnWiseExpensesDetail',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@cnWiseExpensesDetail',
+        'as' => 'finance.cn-wise-expenses-detail',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.trial-balance' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/trial-balance',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@trialBalance',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@trialBalance',
+        'as' => 'finance.trial-balance',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.master-schedule' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/master-schedule',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@masterSchedule',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@masterSchedule',
+        'as' => 'finance.master-schedule',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.accounts-ledger' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/accounts-ledger',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@accountsLedger',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@accountsLedger',
+        'as' => 'finance.accounts-ledger',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.profit-loss-comparative' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/profit-loss-comparative',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@profitLossComparative',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@profitLossComparative',
+        'as' => 'finance.profit-loss-comparative',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.month-wise-closing-balance-breakup' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/month-wise-closing-balance-breakup',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@monthWiseClosingBalanceBreakup',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@monthWiseClosingBalanceBreakup',
+        'as' => 'finance.month-wise-closing-balance-breakup',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.group-outstanding-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/group-outstanding-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@groupOutstandingDetail',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@groupOutstandingDetail',
+        'as' => 'finance.group-outstanding-detail',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.group-ledger' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/group-ledger',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@groupLedger',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@groupLedger',
+        'as' => 'finance.group-ledger',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.trial-balance-console' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/trial-balance-console',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@trialBalanceConsole',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@trialBalanceConsole',
+        'as' => 'finance.trial-balance-console',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.master-schedule-console' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/master-schedule-console',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@masterScheduleConsole',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@masterScheduleConsole',
+        'as' => 'finance.master-schedule-console',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.accounts-ledger-console' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/accounts-ledger-console',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@accountsLedgerConsole',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@accountsLedgerConsole',
+        'as' => 'finance.accounts-ledger-console',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.pl-comparative-console' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/pl-comparative-console',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@plComparativeConsole',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@plComparativeConsole',
+        'as' => 'finance.pl-comparative-console',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.account-grouping-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/account-grouping-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@accountGroupingDetail',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@accountGroupingDetail',
+        'as' => 'finance.account-grouping-detail',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.sales-tax-register-invoice-wise' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/sales-tax-register-invoice-wise',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@salesTaxRegisterInvoiceWise',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@salesTaxRegisterInvoiceWise',
+        'as' => 'finance.sales-tax-register-invoice-wise',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.sales-tax-register-customer-wise' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/sales-tax-register-customer-wise',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@salesTaxRegisterCustomerWise',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@salesTaxRegisterCustomerWise',
+        'as' => 'finance.sales-tax-register-customer-wise',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.party-wise-outstanding-detailed' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/party-wise-outstanding-detailed',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@partyWiseOutstandingDetailed',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@partyWiseOutstandingDetailed',
+        'as' => 'finance.party-wise-outstanding-detailed',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.party-wise-outstanding-aging' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/party-wise-outstanding-aging',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@partyWiseOutstandingAging',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@partyWiseOutstandingAging',
+        'as' => 'finance.party-wise-outstanding-aging',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'finance.party-wise-cleared-outstanding-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'finance/party-wise-cleared-outstanding-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FinanceController@partyWiseClearedOutstandingDetail',
+        'controller' => 'App\\Http\\Controllers\\FinanceController@partyWiseClearedOutstandingDetail',
+        'as' => 'finance.party-wise-cleared-outstanding-detail',
+        'namespace' => NULL,
+        'prefix' => '/finance',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'chart-of-accounts',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.index',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@index',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'chart-of-accounts/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.create',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@create',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@create',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'chart-of-accounts',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.store',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@store',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'chart-of-accounts/{chart_of_account}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.show',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@show',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'chart-of-accounts/{chart_of_account}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.edit',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@edit',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@edit',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'chart-of-accounts/{chart_of_account}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.update',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@update',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'chart-of-accounts.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'chart-of-accounts/{chart_of_account}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'as' => 'chart-of-accounts.destroy',
+        'uses' => 'App\\Http\\Controllers\\ChartOfAccountController@destroy',
+        'controller' => 'App\\Http\\Controllers\\ChartOfAccountController@destroy',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vouchers',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@index',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@index',
+        'as' => 'vouchers.index',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vouchers/create/{type?}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@create',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@create',
+        'as' => 'vouchers.create',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'vouchers',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@store',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@store',
+        'as' => 'vouchers.store',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vouchers/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@show',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@show',
+        'as' => 'vouchers.show',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vouchers/{id}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@edit',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@edit',
+        'as' => 'vouchers.edit',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'vouchers/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@update',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@update',
+        'as' => 'vouchers.update',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vouchers.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'vouchers/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VoucherController@destroy',
+        'controller' => 'App\\Http\\Controllers\\VoucherController@destroy',
+        'as' => 'vouchers.destroy',
+        'namespace' => NULL,
+        'prefix' => '/vouchers',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.item-codes' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/item-codes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@itemCodes',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@itemCodes',
+        'as' => 'master-data.item-codes',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.item-codes.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'master-data/item-codes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@storeItemCode',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@storeItemCode',
+        'as' => 'master-data.item-codes.store',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.item-codes.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'master-data/item-codes/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@updateItemCode',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@updateItemCode',
+        'as' => 'master-data.item-codes.update',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.item-codes.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'master-data/item-codes/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@deleteItemCode',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@deleteItemCode',
+        'as' => 'master-data.item-codes.delete',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.container-sizes' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/container-sizes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@containerSizes',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@containerSizes',
+        'as' => 'master-data.container-sizes',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.container-sizes.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'master-data/container-sizes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@storeContainerSize',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@storeContainerSize',
+        'as' => 'master-data.container-sizes.store',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.container-sizes.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'master-data/container-sizes/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@updateContainerSize',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@updateContainerSize',
+        'as' => 'master-data.container-sizes.update',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.container-sizes.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'master-data/container-sizes/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@deleteContainerSize',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@deleteContainerSize',
+        'as' => 'master-data.container-sizes.delete',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.invoice-charges' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/invoice-charges',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@invoiceCharges',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@invoiceCharges',
+        'as' => 'master-data.invoice-charges',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.invoice-charges.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'master-data/invoice-charges',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@storeInvoiceCharge',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@storeInvoiceCharge',
+        'as' => 'master-data.invoice-charges.store',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.invoice-charges.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'master-data/invoice-charges/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@updateInvoiceCharge',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@updateInvoiceCharge',
+        'as' => 'master-data.invoice-charges.update',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.invoice-charges.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'master-data/invoice-charges/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@deleteInvoiceCharge',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@deleteInvoiceCharge',
+        'as' => 'master-data.invoice-charges.delete',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.cargo-officers' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/cargo-officers',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@cargoOfficers',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@cargoOfficers',
+        'as' => 'master-data.cargo-officers',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.cargo-officers.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'master-data/cargo-officers',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@storeCargoOfficer',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@storeCargoOfficer',
+        'as' => 'master-data.cargo-officers.store',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.cargo-officers.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'master-data/cargo-officers/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@updateCargoOfficer',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@updateCargoOfficer',
+        'as' => 'master-data.cargo-officers.update',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.cargo-officers.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'master-data/cargo-officers/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@deleteCargoOfficer',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@deleteCargoOfficer',
+        'as' => 'master-data.cargo-officers.delete',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.cargo-officer-stock-issue' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/cargo-officer-stock-issue',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@cargoOfficerStockIssue',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@cargoOfficerStockIssue',
+        'as' => 'master-data.cargo-officer-stock-issue',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.zone-codes' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/zone-codes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@zoneCodes',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@zoneCodes',
+        'as' => 'master-data.zone-codes',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.zone-codes.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'master-data/zone-codes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@storeZoneCode',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@storeZoneCode',
+        'as' => 'master-data.zone-codes.store',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.zone-codes.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'master-data/zone-codes/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@updateZoneCode',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@updateZoneCode',
+        'as' => 'master-data.zone-codes.update',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.zone-codes.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'master-data/zone-codes/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@deleteZoneCode',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@deleteZoneCode',
+        'as' => 'master-data.zone-codes.delete',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.party-area-rates' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'master-data/party-area-rates',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@partyAreaRates',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@partyAreaRates',
+        'as' => 'master-data.party-area-rates',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.party-area-rates.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'master-data/party-area-rates',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@storePartyAreaRate',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@storePartyAreaRate',
+        'as' => 'master-data.party-area-rates.store',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.party-area-rates.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'master-data/party-area-rates/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@updatePartyAreaRate',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@updatePartyAreaRate',
+        'as' => 'master-data.party-area-rates.update',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'master-data.party-area-rates.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'master-data/party-area-rates/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MasterDataController@deletePartyAreaRate',
+        'controller' => 'App\\Http\\Controllers\\MasterDataController@deletePartyAreaRate',
+        'as' => 'master-data.party-area-rates.delete',
+        'namespace' => NULL,
+        'prefix' => '/master-data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'bookings',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.index',
+        'uses' => 'App\\Http\\Controllers\\BookingController@index',
+        'controller' => 'App\\Http\\Controllers\\BookingController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'bookings/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.create',
+        'uses' => 'App\\Http\\Controllers\\BookingController@create',
+        'controller' => 'App\\Http\\Controllers\\BookingController@create',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'bookings',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.store',
+        'uses' => 'App\\Http\\Controllers\\BookingController@store',
+        'controller' => 'App\\Http\\Controllers\\BookingController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'bookings/{booking}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.show',
+        'uses' => 'App\\Http\\Controllers\\BookingController@show',
+        'controller' => 'App\\Http\\Controllers\\BookingController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'bookings/{booking}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.edit',
+        'uses' => 'App\\Http\\Controllers\\BookingController@edit',
+        'controller' => 'App\\Http\\Controllers\\BookingController@edit',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'bookings/{booking}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.update',
+        'uses' => 'App\\Http\\Controllers\\BookingController@update',
+        'controller' => 'App\\Http\\Controllers\\BookingController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'bookings.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'bookings/{booking}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'bookings.destroy',
+        'uses' => 'App\\Http\\Controllers\\BookingController@destroy',
+        'controller' => 'App\\Http\\Controllers\\BookingController@destroy',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vehicle-load-plans',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@index',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@index',
+        'as' => 'vehicle-load-plans.index',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vehicle-load-plans/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@create',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@create',
+        'as' => 'vehicle-load-plans.create',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'vehicle-load-plans',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@store',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@store',
+        'as' => 'vehicle-load-plans.store',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vehicle-load-plans/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@show',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@show',
+        'as' => 'vehicle-load-plans.show',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vehicle-load-plans/{id}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@edit',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@edit',
+        'as' => 'vehicle-load-plans.edit',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'vehicle-load-plans/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@update',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@update',
+        'as' => 'vehicle-load-plans.update',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'vehicle-load-plans/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@destroy',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@destroy',
+        'as' => 'vehicle-load-plans.destroy',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'vehicle-load-plans.received' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'vehicle-load-plans/received',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\VehicleLoadPlanController@received',
+        'controller' => 'App\\Http\\Controllers\\VehicleLoadPlanController@received',
+        'as' => 'vehicle-load-plans.received',
+        'namespace' => NULL,
+        'prefix' => '/vehicle-load-plans',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'delivery-sheets',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.index',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@index',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'delivery-sheets/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.create',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@create',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@create',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'delivery-sheets',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.store',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@store',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'delivery-sheets/{delivery_sheet}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.show',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@show',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'delivery-sheets/{delivery_sheet}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.edit',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@edit',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@edit',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'delivery-sheets/{delivery_sheet}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.update',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@update',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delivery-sheets.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'delivery-sheets/{delivery_sheet}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'delivery-sheets.destroy',
+        'uses' => 'App\\Http\\Controllers\\DeliverySheetController@destroy',
+        'controller' => 'App\\Http\\Controllers\\DeliverySheetController@destroy',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'pickup-sheets',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.index',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@index',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'pickup-sheets/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.create',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@create',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@create',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'pickup-sheets',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.store',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@store',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'pickup-sheets/{pickup_sheet}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.show',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@show',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'pickup-sheets/{pickup_sheet}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.edit',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@edit',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@edit',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'pickup-sheets/{pickup_sheet}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.update',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@update',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'pickup-sheets.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'pickup-sheets/{pickup_sheet}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'pickup-sheets.destroy',
+        'uses' => 'App\\Http\\Controllers\\PickupSheetController@destroy',
+        'controller' => 'App\\Http\\Controllers\\PickupSheetController@destroy',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'shipments.index' => 
     array (
       'methods' => 
@@ -7113,6 +13255,84 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'purchases.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'purchases',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:121:"function () {
+            return redirect()->route(\'dashboard\')->with(\'info\', \'Purchases module coming soon.\');
+        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000078f0000000000000000";}}',
+        'as' => 'purchases.index',
+        'namespace' => NULL,
+        'prefix' => '/purchases',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'purchases.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'purchases/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:121:"function () {
+            return redirect()->route(\'dashboard\')->with(\'info\', \'Purchases module coming soon.\');
+        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007970000000000000000";}}',
+        'as' => 'purchases.create',
+        'namespace' => NULL,
+        'prefix' => '/purchases',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'cities.index' => 
     array (
       'methods' => 
@@ -7962,6 +14182,357 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'reports.hub-wise-profit-loss' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/hub-wise-profit-loss',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@hubWiseProfitLoss',
+        'controller' => 'App\\Http\\Controllers\\ReportController@hubWiseProfitLoss',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.hub-wise-profit-loss',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.spo-wise-profit-loss' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/spo-wise-profit-loss',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@spoWiseProfitLoss',
+        'controller' => 'App\\Http\\Controllers\\ReportController@spoWiseProfitLoss',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.spo-wise-profit-loss',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.hub-wise-cn-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/hub-wise-cn-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@hubWiseCnDetail',
+        'controller' => 'App\\Http\\Controllers\\ReportController@hubWiseCnDetail',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.hub-wise-cn-detail',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.transporter-wise-documents-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/transporter-wise-documents-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@transporterWiseDocumentsDetail',
+        'controller' => 'App\\Http\\Controllers\\ReportController@transporterWiseDocumentsDetail',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.transporter-wise-documents-detail',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.zone-wise-profit-loss' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/zone-wise-profit-loss',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@zoneWiseProfitLoss',
+        'controller' => 'App\\Http\\Controllers\\ReportController@zoneWiseProfitLoss',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.zone-wise-profit-loss',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.list-of-missing-sn-numbers' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/list-of-missing-sn-numbers',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@listOfMissingSnNumbers',
+        'controller' => 'App\\Http\\Controllers\\ReportController@listOfMissingSnNumbers',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.list-of-missing-sn-numbers',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.city-code-hub-wise-list' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/city-code-hub-wise-list',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@cityCodeHubWiseList',
+        'controller' => 'App\\Http\\Controllers\\ReportController@cityCodeHubWiseList',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.city-code-hub-wise-list',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.list-of-rates' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/list-of-rates',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@listOfRates',
+        'controller' => 'App\\Http\\Controllers\\ReportController@listOfRates',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.list-of-rates',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.party-wise-fuel-rate-list' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/party-wise-fuel-rate-list',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@partyWiseFuelRateList',
+        'controller' => 'App\\Http\\Controllers\\ReportController@partyWiseFuelRateList',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.party-wise-fuel-rate-list',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'reports.delivery-cn-detail' => 
     array (
       'methods' => 
@@ -8064,6 +14635,201 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'reports.cn-in-stock',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.list-of-invoices-sales-tax' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/list-of-invoices-sales-tax',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@listOfInvoicesSalesTax',
+        'controller' => 'App\\Http\\Controllers\\ReportController@listOfInvoicesSalesTax',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.list-of-invoices-sales-tax',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.cn-detail-account-cod' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/cn-detail-account-cod',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@cnDetailAccountCod',
+        'controller' => 'App\\Http\\Controllers\\ReportController@cnDetailAccountCod',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.cn-detail-account-cod',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.delivery-sheet-cod-detail' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/delivery-sheet-cod-detail',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@deliverySheetCodDetail',
+        'controller' => 'App\\Http\\Controllers\\ReportController@deliverySheetCodDetail',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.delivery-sheet-cod-detail',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.cn-detail-account-cod-status' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/cn-detail-account-cod-status',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@cnDetailAccountCodStatus',
+        'controller' => 'App\\Http\\Controllers\\ReportController@cnDetailAccountCodStatus',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.cn-detail-account-cod-status',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.non-service-charges-on-cn' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/non-service-charges-on-cn',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@nonServiceChargesOnCn',
+        'controller' => 'App\\Http\\Controllers\\ReportController@nonServiceChargesOnCn',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.non-service-charges-on-cn',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8571,6 +15337,45 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'reports.list-of-employees',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'reports.list-of-monthly-payroll' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'reports/list-of-monthly-payroll',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'role:admin,staff',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ReportController@listOfMonthlyPayroll',
+        'controller' => 'App\\Http\\Controllers\\ReportController@listOfMonthlyPayroll',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'reports.list-of-monthly-payroll',
       ),
       'fallback' => false,
       'defaults' => 
